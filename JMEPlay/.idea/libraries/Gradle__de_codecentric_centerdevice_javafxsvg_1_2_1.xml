@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: de.codecentric.centerdevice:javafxsvg:1.2.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.codecentric.centerdevice/javafxsvg/1.2.1/e773fe3ef8762a649bb5f6e6edceb4784bfdfc40/javafxsvg-1.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.codecentric.centerdevice/javafxsvg/1.2.1/2071ab3a2b6b25352f83bf58d3a9cfb180e051a/javafxsvg-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Settings for whole application</comment>
+<entry key="guiIconSize">32</entry>
+<entry key="guiBorderBarSize">32</entry>
+</properties>

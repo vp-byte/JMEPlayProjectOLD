@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JMEPlay.iml" filepath="$PROJECT_DIR$/JMEPlay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore.iml" group="JMEPlayCore" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_main.iml" group="JMEPlayCore" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_test.iml" group="JMEPlayCore" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayDefinition/JMEPlayDefinition.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayDefinition/JMEPlayDefinition.iml" group="JMEPlayDefinition" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayDefinition/JMEPlayDefinition_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayDefinition/JMEPlayDefinition_main.iml" group="JMEPlayDefinition" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayDefinition/JMEPlayDefinition_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayDefinition/JMEPlayDefinition_test.iml" group="JMEPlayDefinition" />
+    </modules>
+  </component>
+</project>

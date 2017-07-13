@@ -1,0 +1,15 @@
+/*
+ * JMEPLay
+ */
+
+allprojects {
+    repositories {
+    	mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+subprojects {
+    version = '1.0'
+}
