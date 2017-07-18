@@ -5,8 +5,8 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1.66667in" height="1.66667in"
      viewBox="0 0 120 120">
-  <path id="Unnamed #1"
-        fill="none" stroke="black" stroke-width="3"
+  <path id="back"
+        fill="none" stroke="black" stroke-width="10"
         d="M 18.73,70.00
            C 19.64,60.00 23.09,50.00 33.09,50.00
              32.77,50.00 103.09,49.82 103.09,49.82
@@ -16,8 +16,8 @@
              90.00,109.82 20.00,110.00 20.00,110.00
              10.00,110.00 15.09,100.00 16.00,90.00
              16.00,90.00 18.73,70.00 18.73,70.00 Z" />
-  <path id="Unnamed"
-        fill="none" stroke="black" stroke-width="3"
+  <path id="front"
+        fill="none" stroke="black" stroke-width="10"
         d="M 100.00,49.82
            C 99.91,39.93 100.00,29.82 90.00,29.82
              90.00,29.82 49.68,30.00 50.00,30.00

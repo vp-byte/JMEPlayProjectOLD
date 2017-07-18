@@ -1,27 +1,25 @@
 package com.jmeplay.plugin.assets;
 
+import com.jmeplay.core.EditorComponent;
+import com.jmeplay.core.Position;
+import com.jmeplay.core.handler.FileHandler;
+import com.jmeplay.core.utils.ImageLoader;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.layout.StackPane;
+import javafx.util.Callback;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Comparator;
+import java.util.List;
 import java.util.function.Function;
-
-import javax.annotation.PostConstruct;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import com.jmeplay.core.EditorComponent;
-import com.jmeplay.core.Position;
-import com.jmeplay.core.utils.ImageLoader;
-
-import javafx.scene.Node;
-import javafx.scene.control.Label;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeView;
-import javafx.scene.layout.StackPane;
 
 /**
  * Create AssetEditorComponent to load and view all assets in tree view
@@ -29,10 +27,10 @@ import javafx.scene.layout.StackPane;
  * @author vp-byte (Vladimir Petrenko)
  */
 @Component
-public class AssetsEditorComponent extends EditorComponent {
+public class AssetsComponent extends EditorComponent {
     private final String uniqueId = "73a3b67a-d279-4d5e-9b83-852570cdc2a6";
     private final String name = "Assets";
-    private final String description = "Component to magage all assets";
+    private final String description = "Component to manage all assets";
     private Label label;
     private StackPane component;
 
@@ -42,7 +40,10 @@ public class AssetsEditorComponent extends EditorComponent {
     private TreeItem<Path> rootTreeItem;
 
     @Autowired
-    private ImageDefinder imageDefinder;
+    private AssetsImageDefinder assetsImageDefinder;
+
+    @Autowired(required = false)
+    private List<FileHandler> fileHandlers;
 
     @PostConstruct
     private void init() {
@@ -78,45 +79,43 @@ public class AssetsEditorComponent extends EditorComponent {
     }
 
     private void initTreeView() {
-        rootTreeItem = new TreeItem<Path>(Paths.get(rootFolder));
+        Path rootPath = Paths.get(rootFolder);
+        rootTreeItem = new TreeItem<>(rootPath.getFileName());
         rootTreeItem.setExpanded(true);
+
         try {
-            createTree(rootTreeItem);
+            createTree(rootPath, rootTreeItem);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         // sort tree structure by name
-        rootTreeItem.getChildren().sort(Comparator.comparing(new Function<TreeItem<Path>, String>() {
-            @Override
-            public String apply(TreeItem<Path> t) {
-                return t.getValue().toString().toLowerCase();
-            }
-        }));
+        rootTreeItem.getChildren().sort(Comparator.comparing(t -> t.getValue().getFileName().toString().toLowerCase()));
 
         // create components
-        treeView = new TreeView<Path>(rootTreeItem);
+        treeView = new TreeView<>(rootTreeItem);
+        treeView.setCellFactory(param -> new AssetsTreeCell(fileHandlers));
     }
+
 
     /**
      * Recursively create the tree
      *
-     * @param rootItem
+     * @param rootPath
      * @throws IOException
      */
-    private void createTree(TreeItem<Path> rootItem) throws IOException {
+    private void createTree(Path rootPath, TreeItem rootItem) throws IOException {
 
-        try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(rootItem.getValue())) {
+        try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(rootPath)) {
 
             for (Path path : directoryStream) {
 
-                TreeItem<Path> newItem = new TreeItem<Path>(path, imageDefinder.imageByFilename(path));
-                newItem.setExpanded(true);
+                TreeItem<Path> newItem = new TreeItem<>(path, assetsImageDefinder.imageByFilename(path));
 
                 rootItem.getChildren().add(newItem);
 
                 if (Files.isDirectory(path)) {
-                    createTree(newItem);
+                    createTree(path, newItem);
                 }
             }
         }
