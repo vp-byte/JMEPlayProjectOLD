@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 import java.nio.file.Path;
 
 /**
- * Handler to copy file
+ * Handler to paste file
  *
  * @author vp-byte (Vladimir Petrenko)
  */
 @Component
-@Order(value = 3)
-public class CopyFileHandler extends FileHandler {
+@Order(value = 5)
+public class PasteFileHandler extends FileHandler {
     private int size = 24;
 
     @Override
@@ -25,17 +25,17 @@ public class CopyFileHandler extends FileHandler {
 
     @Override
     public String name() {
-        return "Copy";
+        return "Paste";
     }
 
     @Override
     public String description() {
-        return "Copy file to clipboard";
+        return "Paste file to clipboard";
     }
 
     @Override
     public ImageView image() {
-        return ImageLoader.initImageView("/icons/handler/copy.svg", size, size);
+        return ImageLoader.initImageView("/icons/handler/paste.svg", size, size);
     }
 
     @Override

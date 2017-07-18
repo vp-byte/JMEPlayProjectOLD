@@ -2,10 +2,14 @@ package com.jmeplay.plugin.assets;
 
 import com.jmeplay.core.handler.FileHandler;
 import com.jmeplay.core.utils.PathResolver;
+import javafx.geometry.Side;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.cell.TextFieldTreeCell;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,19 +20,13 @@ import java.util.stream.Collectors;
  * @author vp-byte (Vladimir Petrenko)
  */
 public class AssetsTreeCell extends TextFieldTreeCell<Path> {
-    private ContextMenu contextMenu = null;
     private List<FileHandler> fileHandlers = null;
 
     public AssetsTreeCell(List<FileHandler> fileHandlers) {
         this.fileHandlers = fileHandlers;
-        if (fileHandlers != null) {
-            contextMenu = new ContextMenu();
-            filterFileHandler(fileHandlers, this.getItem()).forEach(fileHandler -> {
-                MenuItem menuItem = new MenuItem(fileHandler.name(), fileHandler.image());
-                menuItem.setOnAction(event -> fileHandler.handle(this.getItem()));
-                contextMenu.getItems().add(menuItem);
-            });
-        }
+
+        // event handling
+        setOnMouseClicked(this::processClick);
     }
 
     @Override
@@ -37,18 +35,45 @@ public class AssetsTreeCell extends TextFieldTreeCell<Path> {
         if (item != null) {
             setText(item.getFileName().toString());
         }
-        if (!empty) {
-            setContextMenu(contextMenu);
+    }
+
+    /**
+     * Handle a mouse click.
+     */
+    private void processClick(final MouseEvent event) {
+        if (getItem() == null) return;
+
+        final MouseButton button = event.getButton();
+        if (button == MouseButton.SECONDARY){
+            final ContextMenu contextMenu = updateContextMenu();
+            if (contextMenu == null) return;
+            contextMenu.show(this, Side.BOTTOM, event.getX(), -event.getY());
         }
     }
 
-    private List<FileHandler> filterFileHandler(List<FileHandler> fileHandlers, Path path) {
-        String fileExtension = PathResolver.resolveExtension(path);
+    private ContextMenu updateContextMenu() {
+        if (fileHandlers != null) {
+            ContextMenu contextMenu = new ContextMenu();
+            filterFileHandler(fileHandlers).forEach(fileHandler -> {
+                MenuItem menuItem = new MenuItem(fileHandler.name(), fileHandler.image());
+                menuItem.setOnAction(event -> fileHandler.handle(this.getItem()));
+                contextMenu.getItems().add(menuItem);
+            });
+            return contextMenu;
+        }
+        return null;
+    }
+
+    private List<FileHandler> filterFileHandler(List<FileHandler> fileHandlers) {
+        String fileExtension = PathResolver.resolveExtension(getItem());
         return fileHandlers.stream().filter(fileHandler -> {
             if (fileExtension != null && fileExtension.equals(fileHandler.filetype())) {
                 return true;
             }
-            if (fileHandler.filetype().equals("any")) {
+            if (fileHandler.filetype().equals(FileHandler.any)) {
+                return true;
+            }
+            if (getItem() != null && !Files.isDirectory(getItem()) && fileHandler.filetype().equals(FileHandler.file)) {
                 return true;
             }
             return false;

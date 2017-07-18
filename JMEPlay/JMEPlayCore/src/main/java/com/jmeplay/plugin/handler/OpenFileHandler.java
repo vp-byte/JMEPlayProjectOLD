@@ -14,28 +14,28 @@ import java.nio.file.Path;
  * @author vp-byte (Vladimir Petrenko)
  */
 @Component
-@Order(value = 3)
-public class CopyFileHandler extends FileHandler {
+@Order(value = 1)
+public class OpenFileHandler extends FileHandler {
     private int size = 24;
 
     @Override
     public String filetype() {
-        return FileHandler.any;
+        return FileHandler.file;
     }
 
     @Override
     public String name() {
-        return "Copy";
+        return "Open";
     }
 
     @Override
     public String description() {
-        return "Copy file to clipboard";
+        return "Open file";
     }
 
     @Override
     public ImageView image() {
-        return ImageLoader.initImageView("/icons/handler/copy.svg", size, size);
+        return ImageLoader.initImageView("/icons/handler/open.svg", size, size);
     }
 
     @Override

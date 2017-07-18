@@ -104,20 +104,17 @@ public class AssetsComponent extends EditorComponent {
      * @param rootPath
      * @throws IOException
      */
-    private void createTree(Path rootPath, TreeItem rootItem) throws IOException {
-
+    private void createTree(Path rootPath, TreeItem<Path> rootItem) throws IOException {
         try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(rootPath)) {
-
             for (Path path : directoryStream) {
-
-                TreeItem<Path> newItem = new TreeItem<>(path, assetsImageDefinder.imageByFilename(path));
-
+                TreeItem<Path> newItem = new TreeItem(path, assetsImageDefinder.imageByFilename(path));
                 rootItem.getChildren().add(newItem);
-
                 if (Files.isDirectory(path)) {
                     createTree(path, newItem);
                 }
             }
+            // sort tree structure by name
+            rootItem.getChildren().sort(Comparator.comparing(t -> t.getValue().getFileName().toString().toLowerCase()));
         }
     }
 
