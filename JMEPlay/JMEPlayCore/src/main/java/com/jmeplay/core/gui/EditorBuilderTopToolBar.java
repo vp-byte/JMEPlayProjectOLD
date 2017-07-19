@@ -10,7 +10,7 @@ import javafx.scene.control.Separator;
 import javafx.scene.control.ToolBar;
 
 /**
- * Creates tool bar for the top view of editor
+ * Create tool bar for the top view of editor
  *
  * @author vp-byte (Vladimir Petrenko)
  */
@@ -30,7 +30,4 @@ public class EditorBuilderTopToolBar {
         return toolBar;
     }
 
-    public void updateToolbar() {
-
-    }
 }

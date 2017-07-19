@@ -13,7 +13,7 @@ import java.nio.file.Path;
  *
  * @author vp-byte (Vladimir Petrenko)
  */
-public abstract class FileHandler {
+public abstract class FileHandler<T> {
 
     public static final String any = "any";
     public static final String file = "file";
@@ -55,5 +55,5 @@ public abstract class FileHandler {
      *
      * @param path to the file
      */
-    public abstract void handle(Path path);
+    public abstract void handle(Path path, T source);
 }

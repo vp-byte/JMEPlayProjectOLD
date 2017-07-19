@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$/../../../JMEPlayCore">
       <excludeFolder url="file://$MODULE_DIR$/../../../JMEPlayCore/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../JMEPlayCore/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../JMEPlayCore/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

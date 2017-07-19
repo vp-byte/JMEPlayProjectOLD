@@ -1,27 +1,24 @@
 package com.jmeplay.core.gui;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import javax.annotation.PostConstruct;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import com.jmeplay.core.EditorComponent;
 import com.jmeplay.core.Position;
 import com.jmeplay.core.utils.Settings;
-
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * Creates border bars for the left, right and bottom view of center in editor
+ * Create border bars for the left, right and bottom view of center in editor
  *
  * @author vp-byte (Vladimir Petrenko)
  */
@@ -52,6 +49,9 @@ public class EditorBuilderCenterBorderBar {
     @Autowired(required = false)
     private List<EditorComponent> editorComponents;
 
+    /**
+     * Initialize center view with all border bars depends on spring context
+     */
     @PostConstruct
     private void init() {
         initElements();
@@ -60,6 +60,9 @@ public class EditorBuilderCenterBorderBar {
         initBottom();
     }
 
+    /**
+     * Initialize all view elements from spring context
+     */
     private void initElements() {
         borderItemsLeft = new ArrayList<>();
         borderItemsRight = new ArrayList<>();
@@ -90,6 +93,13 @@ public class EditorBuilderCenterBorderBar {
         }
     }
 
+    /**
+     * Initialize border item depends on {@link EditorComponent}
+     *
+     * @param component component extends from {@link EditorComponent}
+     * @param selected  show the component and mark as selected
+     * @return node of border item
+     */
     private Node initBorderItem(EditorComponent component, boolean selected) {
         Label label = component.label();
         Position position = component.getPosition();
@@ -109,6 +119,9 @@ public class EditorBuilderCenterBorderBar {
         return new Group(label);
     }
 
+    /**
+     * Initialize left border bar view
+     */
     private void initLeft() {
         left = new VBox();
         left.getChildren().addAll(borderItemsLeft);
@@ -116,6 +129,9 @@ public class EditorBuilderCenterBorderBar {
         left.prefHeightProperty().bind(borderBarLeft.heightProperty());
     }
 
+    /**
+     * Initialize right border bar view
+     */
     private void initRight() {
         right = new VBox();
         right.getChildren().addAll(borderItemsRight);
@@ -123,6 +139,9 @@ public class EditorBuilderCenterBorderBar {
         right.prefHeightProperty().bind(borderBarRight.heightProperty());
     }
 
+    /**
+     * Initialize bottom border bar view
+     */
     private void initBottom() {
         bottom = new HBox();
         bottom.getStyleClass().add("borderbar");
@@ -135,6 +154,12 @@ public class EditorBuilderCenterBorderBar {
         bottom.prefHeightProperty().bind(borderBarBottom.heightProperty());
     }
 
+    /**
+     * Handle action from border bar item
+     *
+     * @param source   of event
+     * @param position of the border bar and item
+     */
     private void handleBorderItem(Object source, Position position) {
         List<Node> borderItems = null;
         if (position == Position.LEFT) {
@@ -158,6 +183,11 @@ public class EditorBuilderCenterBorderBar {
         }
     }
 
+    /**
+     * Handle action from left border bar item
+     *
+     * @param source of event
+     */
     private void handleBorderItemLeft(Object source) {
         if (source == selectedLeft && !editorBuilderCenterCenter.isLeftRemoved()) {
             editorBuilderCenterCenter.removeLeft();
@@ -173,6 +203,11 @@ public class EditorBuilderCenterBorderBar {
         selectedLeft = source;
     }
 
+    /**
+     * Handle action from right border bar item
+     *
+     * @param source of event
+     */
     private void handleBorderItemRight(Object source) {
         if (source == selectedRight && !editorBuilderCenterCenter.isRightRemoved()) {
             editorBuilderCenterCenter.removeRight();
@@ -188,6 +223,11 @@ public class EditorBuilderCenterBorderBar {
         selectedRight = source;
     }
 
+    /**
+     * Handle action from bottom border bar item
+     *
+     * @param source of event
+     */
     private void handleBorderItemBottom(Object source) {
         if (source == selectedBottom && !editorBuilderCenterCenter.isBottomRemoved()) {
             editorBuilderCenterCenter.removeBottom();
@@ -203,14 +243,23 @@ public class EditorBuilderCenterBorderBar {
         selectedBottom = source;
     }
 
+    /**
+     * @return left border bar
+     */
     public Node borderBarLeft() {
         return borderBarLeft;
     }
 
+    /**
+     * @return right border bar
+     */
     public Node borderBarRight() {
         return borderBarRight;
     }
 
+    /**
+     * @return bottom border bar
+     */
     public Node borderBarBottom() {
         return borderBarBottom;
     }

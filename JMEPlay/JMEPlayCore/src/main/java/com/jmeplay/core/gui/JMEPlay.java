@@ -44,7 +44,7 @@ public class JMEPlay extends Application {
 	}
 
 	/**
-	 * Initialize SpringContext
+	 * Initialize spring context
 	 *
 	 * @throws Exception
 	 */
@@ -73,7 +73,7 @@ public class JMEPlay extends Application {
 	}
 
 	/**
-	 * Stop SpringContext
+	 * Stop spring context
 	 *
 	 * @throws Exception
 	 */

@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.JavaSaBr.jmonkeyengine:jme3-lwjgl3:3.2_branch-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.JavaSaBr.jmonkeyengine/jme3-lwjgl3/3.2_branch-SNAPSHOT/20983ca4cab7e2cfb10204240b37e2930e9a716e/jme3-lwjgl3-3.2_branch-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.JavaSaBr.jmonkeyengine/jme3-lwjgl3/3.2_branch-SNAPSHOT/32529aa52bcb3b422b3f49825716d4179eda5346/jme3-lwjgl3-3.2_branch-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.JavaSaBr.jmonkeyengine/jme3-lwjgl3/3.2_branch-SNAPSHOT/b7cc22286ce8419263de3b4119f4964a109e0e9d/jme3-lwjgl3-3.2_branch-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.JavaSaBr.jmonkeyengine/jme3-lwjgl3/3.2_branch-SNAPSHOT/81ffcd86a0444365096c3973a1e70b4bbf92d1f5/jme3-lwjgl3-3.2_branch-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

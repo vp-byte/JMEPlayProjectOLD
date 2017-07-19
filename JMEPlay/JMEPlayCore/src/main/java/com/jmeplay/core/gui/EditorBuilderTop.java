@@ -9,7 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 
 /**
- * Builder to create top view of editor
+ * Create top view of editor
  *
  * @author vp-byte (Vladimir Petrenko)
  */
@@ -24,6 +24,9 @@ public class EditorBuilderTop {
     @Autowired
     private EditorBuilderTopToolBar editorBuilderTopToolBar;
 
+    /**
+     * Initialize top view of editor
+     */
     @PostConstruct
     private void init() {
         top = new VBox();
@@ -32,7 +35,7 @@ public class EditorBuilderTop {
     }
 
     /**
-     * Create top view for asset editor
+     * @return top view
      */
     public Node view() {
         return top;

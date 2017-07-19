@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
  */
 public class AssetsTreeCell extends TextFieldTreeCell<Path> {
     private List<FileHandler> fileHandlers = null;
+    private ContextMenu contextMenu = null;
 
     public AssetsTreeCell(List<FileHandler> fileHandlers) {
         this.fileHandlers = fileHandlers;
@@ -44,10 +45,17 @@ public class AssetsTreeCell extends TextFieldTreeCell<Path> {
         if (getItem() == null) return;
 
         final MouseButton button = event.getButton();
-        if (button == MouseButton.SECONDARY){
-            final ContextMenu contextMenu = updateContextMenu();
+        if (button == MouseButton.SECONDARY) {
+
+            if (contextMenu != null && contextMenu.isShowing()) {
+                contextMenu.hide();
+            }
+
+            contextMenu = updateContextMenu();
             if (contextMenu == null) return;
-            contextMenu.show(this, Side.BOTTOM, event.getX(), -event.getY());
+            if (!contextMenu.isShowing()) {
+                contextMenu.show(this, Side.BOTTOM, event.getX(), -event.getY());
+            }
         }
     }
 
@@ -56,7 +64,7 @@ public class AssetsTreeCell extends TextFieldTreeCell<Path> {
             ContextMenu contextMenu = new ContextMenu();
             filterFileHandler(fileHandlers).forEach(fileHandler -> {
                 MenuItem menuItem = new MenuItem(fileHandler.name(), fileHandler.image());
-                menuItem.setOnAction(event -> fileHandler.handle(this.getItem()));
+                menuItem.setOnAction(event -> fileHandler.handle(this.getItem(), this.getTreeView()));
                 contextMenu.getItems().add(menuItem);
             });
             return contextMenu;

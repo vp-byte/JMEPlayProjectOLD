@@ -10,7 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
 /**
- * Creates center view for editor
+ * Create center view for editor
  *
  * @author vp-byte (Vladimir Petrenko)
  */
@@ -23,22 +23,28 @@ public class EditorBuilderCenter {
     private EditorBuilderCenterBorderBar editorBuilderCenterBorderBar;
 
     @Autowired
-    private EditorBuiderInfoBar buiderBottomInfoBar;
+    private EditorBuiderBottomInfoBar buiderBottomInfoBar;
 
     @Autowired
     private EditorBuilderCenterCenter editorBuilderCenterCenter;
 
+    /**
+     * Initialize center view of the editor
+     */
     @PostConstruct
     private void init() {
+        initCenterBorderPane();
+    }
+
+    /**
+     * Initialize border pane an set left, right, bottom and center view
+     */
+    private void initCenterBorderPane() {
         centerBorderPane = new BorderPane();
         buiderBottomInfoBar.getViewModeSwitcher().addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             initCenterBorderPane();
         });
-        initCenterBorderPane();
-    }
-
-    private void initCenterBorderPane() {
-        if (buiderBottomInfoBar.isExpanded()) {
+        if (buiderBottomInfoBar.isVisible()) {
             centerBorderPane.setLeft(editorBuilderCenterBorderBar.borderBarLeft());
             centerBorderPane.setRight(editorBuilderCenterBorderBar.borderBarRight());
             centerBorderPane.setBottom(editorBuilderCenterBorderBar.borderBarBottom());

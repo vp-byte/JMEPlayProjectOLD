@@ -14,12 +14,24 @@ public class BorderBar extends VBox {
 
     private final Position position;
 
+    /**
+     * Create border bar
+     *
+     * @param expandedSize of border bar
+     * @param position     of border bar {@link Position}
+     * @param nodes        to show in the border bar
+     */
     public BorderBar(double expandedSize, Position position, Node... nodes) {
         this.position = position;
         getChildren().addAll(nodes);
         defineSize(expandedSize);
     }
 
+    /**
+     * Set prefered hight or width depends on position
+     *
+     * @param size of border bar
+     */
     private void defineSize(double size) {
         switch (position) {
             case BOTTOM:

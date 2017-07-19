@@ -1,24 +1,28 @@
 package com.jmeplay.core.gui;
 
-import javax.annotation.PostConstruct;
-
-import org.springframework.stereotype.Component;
-
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+
+/**
+ * Create center view to render
+ *
+ * @author vp-byte (Vladimir Petrenko)
+ */
 @Component
 public class EditorBuilderCenterCenter {
 
     private TabPane centerTabPane;
+    private Node centerNode;
 
     private Node leftNode;
     private boolean leftRemoved = false;
-    private Node centerNode;
     private Node rightNode;
     private boolean rightRemoved = false;
     private Node bottomNode;
@@ -28,33 +32,43 @@ public class EditorBuilderCenterCenter {
     private SplitPane splitPane;
     private double dividerPositions[] = {0.2, 0.8, 0.8};
 
+    /**
+     * Initialize center view
+     */
     @PostConstruct
     private void init() {
         centerTabPane = new TabPane();
-        leftNode = new StackPane(new Text("Left"));
         centerNode = new StackPane(centerTabPane);
+        leftNode = new StackPane(new Text("Left"));
         rightNode = new StackPane(new Text("Right"));
         bottomNode = new StackPane(new Text("Bottom"));
 
+        initTopSplitPane();
+        initSplitPane();
+    }
+
+    /**
+     * Initialize view of the top split pane
+     */
+    private void initTopSplitPane() {
         topSplitPane = new SplitPane();
         topSplitPane.setOrientation(Orientation.HORIZONTAL);
         topSplitPane.getItems().addAll(leftNode, centerNode, rightNode);
+    }
 
+    /**
+     * Initialize view of the split pane
+     */
+    private void initSplitPane() {
         splitPane = new SplitPane();
         splitPane.setOrientation(Orientation.VERTICAL);
         splitPane.getItems().addAll(topSplitPane, bottomNode);
-
-        // FIXME cannot proper set the position of divider in SplitPane
-        /*
-         * splitPane.widthProperty().addListener(new ChangeListener<Number>() {
-		 * 
-		 * @Override public void changed(ObservableValue<? extends Number> observable,
-		 * 	Number oldValue, Number newValue) { resetDividerPositions();
-		 *  }
-		 *  });
-		 */
     }
 
+    /**
+     * // FIXME cannot proper set the position of divider in SplitPane
+     * Reset positions of dividers
+     */
     public void resetDividerPositions() {
         splitPane.setDividerPositions(dividerPositions[2]);
         if (isLeftRemoved() && isRightRemoved()) {
@@ -81,15 +95,26 @@ public class EditorBuilderCenterCenter {
         return splitPane;
     }
 
+    /**
+     * remove left view
+     */
     public void removeLeft() {
         topSplitPane.getItems().remove(leftNode);
         leftRemoved = true;
     }
 
+    /**
+     * @return is left view removed
+     */
     public boolean isLeftRemoved() {
         return leftRemoved;
     }
 
+    /**
+     * Set left view
+     *
+     * @param node to view
+     */
     public void setLeft(Node node) {
         if (isLeftRemoved()) {
             topSplitPane.getItems().add(0, node);
@@ -100,15 +125,26 @@ public class EditorBuilderCenterCenter {
         leftRemoved = false;
     }
 
+    /**
+     * remove right view
+     */
     public void removeRight() {
         topSplitPane.getItems().remove(rightNode);
         rightRemoved = true;
     }
 
+    /**
+     * @return is right view removed
+     */
     public boolean isRightRemoved() {
         return rightRemoved;
     }
 
+    /**
+     * Set right view
+     *
+     * @param node to view
+     */
     public void setRight(Node node) {
         int index = isLeftRemoved() ? 1 : 2;
         if (isRightRemoved()) {
@@ -120,15 +156,26 @@ public class EditorBuilderCenterCenter {
         rightRemoved = false;
     }
 
+    /**
+     * remove bottom view
+     */
     public void removeBottom() {
         splitPane.getItems().remove(bottomNode);
         bottomRemoved = true;
     }
 
+    /**
+     * @return is bottom view removed
+     */
     public boolean isBottomRemoved() {
         return bottomRemoved;
     }
 
+    /**
+     * Set bottom view
+     *
+     * @param node to view
+     */
     public void setBottom(Node node) {
         if (isBottomRemoved()) {
             splitPane.getItems().add(1, node);

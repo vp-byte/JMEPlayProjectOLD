@@ -4,28 +4,33 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+
 /**
- * Creates menu for the top view of editor
+ * Create menu for the top view of editor
  *
  * @author vp-byte (Vladimir Petrenko)
  */
 @Component
 public class EditorBuilderTopMenuBar {
+    MenuBar menuBar = null;
 
-    public MenuBar menuBar() {
-        MenuBar menuBar = new MenuBar();
-
-        // --- Menu File
+    /**
+     * Initialize menu bar view depends on spring context
+     */
+    @PostConstruct
+    private void init() {
+        menuBar = new MenuBar();
         Menu menuFile = new Menu("File");
-
-        // --- Menu Edit
         Menu menuEdit = new Menu("Edit");
-
-        // --- Menu View
         Menu menuView = new Menu("View");
-
         menuBar.getMenus().addAll(menuFile, menuEdit, menuView);
+    }
 
+    /**
+     * @return menu bar
+     */
+    public MenuBar menuBar() {
         return menuBar;
     }
 

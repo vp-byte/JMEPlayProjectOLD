@@ -28,8 +28,11 @@ public class EditorBuilder {
     private EditorBuilderCenter editorBuilderCenter;
 
     @Autowired
-    private EditorBuiderInfoBar editorBuiderInfoBar;
+    private EditorBuiderBottomInfoBar editorBuiderInfoBar;
 
+    /**
+     * Initialize whole GUI of the Editor
+     */
     @PostConstruct
     private void init() {
         root = new Group();
@@ -38,6 +41,9 @@ public class EditorBuilder {
         initBorderPane();
     }
 
+    /**
+     * Initialize border pane with size bound on scene size
+     */
     private void initBorderPane() {
         borderPane = new BorderPane();
         borderPane.prefHeightProperty().bind(scene.heightProperty());
@@ -45,7 +51,7 @@ public class EditorBuilder {
     }
 
     /**
-     * Initialize editor view
+     * Initialize editor and set top, center and bottom view of the border pane
      */
     public void initEditor() {
         borderPane.setTop(editorBuilderTop.view());
