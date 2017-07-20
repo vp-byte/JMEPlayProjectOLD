@@ -37,7 +37,8 @@ public class EditorBuilder {
     private void init() {
         root = new Group();
         scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/editor/css/editor.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/jmeplay/css/editor.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/jmeplay/css/plugin/jmeplay-console.css").toExternalForm());
         initBorderPane();
     }
 

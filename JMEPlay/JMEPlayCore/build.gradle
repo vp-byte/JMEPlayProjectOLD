@@ -14,19 +14,22 @@ def javafxsvg = [v: '1.2.1']
 dependencies {
     // Use JUnit test framework
     testCompile("junit:junit:${junit.v}")
-    
+
     // Use Spring-Framework
     compile("org.springframework.boot:spring-boot-starter:${spring_boot.v}")
     testCompile("org.springframework.boot:spring-boot-starter-test:${spring_boot.v}")
-    
+
     // Use JME3 for 3D
     compile "org.jmonkeyengine:jme3-core:${jme3.v}"
     compile "org.jmonkeyengine:jme3-desktop:${jme3.v}"
     compile "org.jmonkeyengine:jme3-lwjgl3:${jme3.v}"
     compile "org.jmonkeyengine:jme3-jogl:${jme3.v}"
-    
+
     // Use JavaFX for JME3
     compile "com.github.JavaSaBr:JME3-JFX:${jme3jfx.v}"
-    
+
+    // ConsolePlugin
+    compile "org.fxmisc.richtext:richtextfx:0.7-M5"
+
     compile project(':JMEPlayDefinition')
 }
