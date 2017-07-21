@@ -4,7 +4,11 @@ import com.jmeplay.core.EditorComponent;
 import com.jmeplay.core.JMEPlayConsole;
 import com.jmeplay.core.Position;
 import javafx.scene.Node;
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.fxmisc.richtext.CodeArea;
@@ -27,13 +31,14 @@ import java.util.regex.Pattern;
  * @author vp-byte (Vladimir Petrenko)
  */
 @Component
-public class JMEPlayConsoleEditorComponent extends EditorComponent implements JMEPlayConsole {
+public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayConsole {
     private final String uniqueId = "81e5ad3a-7e83-4b90-b744-90161d7412bd";
-    private final String name = "JMEPlayConsole";
+    private final String name = "Console";
     private final String description = "Component to magage console output";
     private Label label;
     private CodeArea codeArea;
     private StackPane stackPane;
+    private ContextMenu codeAreaMenu;
 
     private final String ERROR_PATTERN = "\\[(ERROR)\\]\\s";
     private final String WARN_PATTERN = "\\[(WARN)\\]\\s";
@@ -49,42 +54,62 @@ public class JMEPlayConsoleEditorComponent extends EditorComponent implements JM
 
     private final Pattern COMPILED_PATTERN = Pattern.compile(String.join("|", PATTERNS));
 
+    /**
+     * Initialize JMEPlayConsole
+     */
     @PostConstruct
     private void init() {
         setPosition(Position.BOTTOM);
         label = new Label("JMEPlayConsole");
-        codeArea = new CodeArea();
-        codeArea.setEditable(false);
-
+        initCodeArea();
         stackPane = new StackPane(new VirtualizedScrollPane<>(codeArea));
+        stackPane.getStylesheets().add(getClass().getResource("/jmeplay/css/plugin/jmeplay-console.css").toExternalForm());
         this.writeException(new IOException("Hallo"));
     }
 
+    /**
+     * {@link EditorComponent:uniqueId}
+     */
     @Override
     public String uniqueId() {
         return uniqueId;
     }
 
+    /**
+     * {@link EditorComponent:name}
+     */
     @Override
     public String name() {
         return name;
     }
 
+    /**
+     * {@link EditorComponent:description}
+     */
     @Override
     public String description() {
         return description;
     }
 
+    /**
+     * {@link EditorComponent:label}
+     */
     @Override
     public Label label() {
         return label;
     }
 
+    /**
+     * {@link EditorComponent:component}
+     */
     @Override
     public Node component() {
         return stackPane;
     }
 
+    /**
+     * {@link JMEPlayConsole:writeMessage}
+     */
     @Override
     public void writeMessage(MessageType messageType, String message) {
         String text = "\n[" + messageType.name() + "] : " + message;
@@ -93,9 +118,43 @@ public class JMEPlayConsoleEditorComponent extends EditorComponent implements JM
         codeArea.setStyleSpans(0, computeHighlighting(codeArea.getText()));
     }
 
+    /**
+     * {@link JMEPlayConsole:writeException}
+     */
     @Override
     public void writeException(Exception exception) {
         writeMessage(MessageType.ERROR, stackTraceToString(exception));
+    }
+
+
+    private void initCodeArea() {
+        codeArea = new CodeArea();
+        codeArea.setEditable(false);
+        codeArea.setOnMouseClicked(this::processClick);
+    }
+
+    /**
+     * Handle a mouse click.
+     */
+    private void processClick(final MouseEvent event) {
+
+        if (codeAreaMenu != null && codeAreaMenu.isShowing()) {
+            codeAreaMenu.hide();
+        }
+
+        final MouseButton button = event.getButton();
+        if (button == MouseButton.SECONDARY) {
+            codeAreaMenu = new ContextMenu();
+            MenuItem codeAreaMenuCopy = new MenuItem("Copy");
+            codeAreaMenuCopy.setOnAction(eventCopy -> codeArea.copy());
+            MenuItem codeAreaMenuSelectAll = new MenuItem("Select All");
+            codeAreaMenuSelectAll.setOnAction(eventSelectAll -> codeArea.selectAll());
+            if (codeArea.getSelectedText() != null && !codeArea.getSelectedText().isEmpty()) {
+                codeAreaMenu.getItems().add(codeAreaMenuCopy);
+            }
+            codeAreaMenu.getItems().add(codeAreaMenuSelectAll);
+            codeAreaMenu.show(codeArea, event.getScreenX(), event.getScreenY());
+        }
     }
 
     /**
@@ -114,8 +173,8 @@ public class JMEPlayConsoleEditorComponent extends EditorComponent implements JM
     /**
      * Compute highlighting for code area
      *
-     * @param text
-     * @return
+     * @param text to highlight
+     * @return styles for defined spans
      */
     private StyleSpans<Collection<String>> computeHighlighting(String text) {
         Matcher matcher = COMPILED_PATTERN.matcher(text);

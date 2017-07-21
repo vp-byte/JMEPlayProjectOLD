@@ -35,21 +35,33 @@ public class DeleteFileHandler extends FileHandler<TreeView<Path>> {
     @Autowired
     JMEPlayConsole jmePlayConsole;
 
+    /**
+     * {@link FileHandler:filetype}
+     */
     @Override
     public String filetype() {
         return FileHandler.any;
     }
 
+    /**
+     * {@link FileHandler:name}
+     */
     @Override
     public String name() {
         return "Delete";
     }
 
+    /**
+     * {@link FileHandler:description}
+     */
     @Override
     public String description() {
         return "Delete file from project";
     }
 
+    /**
+     * {@link FileHandler:image}
+     */
     @Override
     public ImageView image() {
         return ImageLoader.initImageView("/icons/handler/delete.svg", size, size);
@@ -67,10 +79,12 @@ public class DeleteFileHandler extends FileHandler<TreeView<Path>> {
         this.source = source;
 
         Optional<ButtonType> result = createConfirmAlert().showAndWait();
-        if (result.get() == ButtonType.OK) {
+        if (result.isPresent() && result.get() == ButtonType.OK) {
             try {
                 executeDelete();
+                jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Delete " + path + " from project success");
             } catch (IOException ex) {
+                jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.ERROR, "Delete " + path + " from project fail");
                 jmePlayConsole.writeException(ex);
             }
         }
@@ -85,14 +99,14 @@ public class DeleteFileHandler extends FileHandler<TreeView<Path>> {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Delete");
         alert.setHeaderText(null);
-        alert.setContentText("Really delete " + path.getFileName() + " file?");
+        alert.setContentText("Really delete " + path.getFileName() + "?");
         return alert;
     }
 
     /**
      * Delete execution
      *
-     * @throws IOException
+     * @throws IOException if file do not exist
      */
     private void executeDelete() throws IOException {
         if (!Files.isDirectory(path)) {
