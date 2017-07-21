@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="">
+    <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="Add Copy and Select All function to JMEPlayConsole">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/EditorBuilder.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/EditorBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler$DeleteFileVisitor.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler$DeleteFileVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -46,8 +49,8 @@
       <file leaf-file-name="JMEPlayConsoleComponent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/console/JMEPlayConsoleComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="175" column="31" lean-forward="true" selection-start-line="175" selection-start-column="31" selection-end-line="175" selection-end-column="31" />
+            <state relative-caret-position="359">
+              <caret line="181" column="22" lean-forward="true" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1443,7 +1446,7 @@
       <workItem from="1500559579826" duration="2582000" />
       <workItem from="1500582891764" duration="5510000" />
       <workItem from="1500639490839" duration="800000" />
-      <workItem from="1500643790970" duration="8853000" />
+      <workItem from="1500643790970" duration="9269000" />
     </task>
     <task id="LOCAL-00001" summary="Add Copy and Select All function to JMEPlayConsole">
       <created>1500652278113</created>
@@ -1452,7 +1455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500652278113</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Copy and Select All function to JMEPlayConsole">
+      <created>1500652658027</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1500652658027</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1488,7 +1498,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130943000" />
+    <option name="totallyTimeSpent" value="131359000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1923,8 +1933,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/console/JMEPlayConsoleComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="175" column="31" lean-forward="true" selection-start-line="175" selection-start-column="31" selection-end-line="175" selection-end-column="31" />
+        <state relative-caret-position="359">
+          <caret line="181" column="22" lean-forward="true" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
