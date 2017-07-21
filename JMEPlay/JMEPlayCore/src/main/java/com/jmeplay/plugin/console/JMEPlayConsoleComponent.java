@@ -64,7 +64,6 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
         initCodeArea();
         stackPane = new StackPane(new VirtualizedScrollPane<>(codeArea));
         stackPane.getStylesheets().add(getClass().getResource("/jmeplay/css/plugin/jmeplay-console.css").toExternalForm());
-        this.writeException(new IOException("Hallo"));
     }
 
     /**
