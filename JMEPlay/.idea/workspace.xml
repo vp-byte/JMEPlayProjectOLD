@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="Add Copy and Select All function to JMEPlayConsole">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/EditorBuilder.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/EditorBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler$DeleteFileVisitor.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler$DeleteFileVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler.class" />
+    <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="Add git ignore file">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -50,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/console/JMEPlayConsoleComponent.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="359">
-              <caret line="181" column="22" lean-forward="true" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
+              <caret line="181" column="58" lean-forward="false" selection-start-line="181" selection-start-column="58" selection-end-line="181" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/JMEPlay.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="249">
-              <caret line="71" column="29" lean-forward="true" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+              <caret line="71" column="29" lean-forward="false" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -82,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/DeleteFileHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
-              <caret line="109" column="7" lean-forward="true" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
+              <caret line="109" column="7" lean-forward="false" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -1446,7 +1444,7 @@
       <workItem from="1500559579826" duration="2582000" />
       <workItem from="1500582891764" duration="5510000" />
       <workItem from="1500639490839" duration="800000" />
-      <workItem from="1500643790970" duration="9269000" />
+      <workItem from="1500643790970" duration="9352000" />
     </task>
     <task id="LOCAL-00001" summary="Add Copy and Select All function to JMEPlayConsole">
       <created>1500652278113</created>
@@ -1462,7 +1460,21 @@
       <option name="project" value="LOCAL" />
       <updated>1500652658027</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add git ignore file">
+      <created>1500653090415</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1500653090415</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add git ignore file">
+      <created>1500653106712</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1500653106712</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1498,7 +1510,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131359000" />
+    <option name="totallyTimeSpent" value="131442000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1555,7 +1567,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Copy and Select All function to JMEPlayConsole" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Copy and Select All function to JMEPlayConsole" />
+    <MESSAGE value="Add git ignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add git ignore file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1891,7 +1904,7 @@
     <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/DeleteFileHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
-          <caret line="109" column="7" lean-forward="true" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
+          <caret line="109" column="7" lean-forward="false" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1910,7 +1923,7 @@
     <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/JMEPlay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
-          <caret line="71" column="29" lean-forward="true" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+          <caret line="71" column="29" lean-forward="false" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1934,7 +1947,7 @@
     <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/console/JMEPlayConsoleComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
-          <caret line="181" column="22" lean-forward="true" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
+          <caret line="181" column="58" lean-forward="false" selection-start-line="181" selection-start-column="58" selection-end-line="181" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
