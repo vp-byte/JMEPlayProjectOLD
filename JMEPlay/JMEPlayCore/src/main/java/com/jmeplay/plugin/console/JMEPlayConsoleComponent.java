@@ -17,7 +17,6 @@ import org.fxmisc.richtext.model.StyleSpansBuilder;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Collection;
@@ -35,6 +34,7 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
     private final String uniqueId = "81e5ad3a-7e83-4b90-b744-90161d7412bd";
     private final String name = "Console";
     private final String description = "Component to magage console output";
+    private boolean writeException = false;
     private Label label;
     private CodeArea codeArea;
     private StackPane stackPane;
@@ -60,7 +60,7 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
     @PostConstruct
     private void init() {
         setPosition(Position.BOTTOM);
-        label = new Label("JMEPlayConsole");
+        label = new Label("Console");
         initCodeArea();
         stackPane = new StackPane(new VirtualizedScrollPane<>(codeArea));
         stackPane.getStylesheets().add(getClass().getResource("/jmeplay/css/plugin/jmeplay-console.css").toExternalForm());
@@ -122,10 +122,14 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
      */
     @Override
     public void writeException(Exception exception) {
-        writeMessage(MessageType.ERROR, stackTraceToString(exception));
+        if (writeException) {
+            writeMessage(MessageType.ERROR, stackTraceToString(exception));
+        }
     }
 
-
+    /**
+     * Initialize code area and do not editable
+     */
     private void initCodeArea() {
         codeArea = new CodeArea();
         codeArea.setEditable(false);
@@ -151,7 +155,9 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
             if (codeArea.getSelectedText() != null && !codeArea.getSelectedText().isEmpty()) {
                 codeAreaMenu.getItems().add(codeAreaMenuCopy);
             }
-            codeAreaMenu.getItems().add(codeAreaMenuSelectAll);
+            if (codeArea.getText() != null && !codeArea.getText().isEmpty()) {
+                codeAreaMenu.getItems().add(codeAreaMenuSelectAll);
+            }
             codeAreaMenu.show(codeArea, event.getScreenX(), event.getScreenY());
         }
     }

@@ -68,7 +68,7 @@ public class DeleteFileHandler extends FileHandler<TreeView<Path>> {
     }
 
     /**
-     * Handle event
+     * Handle event to delete file
      *
      * @param path   to the file
      * @param source of tree view with path
