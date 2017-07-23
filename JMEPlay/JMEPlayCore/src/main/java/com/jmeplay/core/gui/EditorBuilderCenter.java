@@ -2,6 +2,7 @@ package com.jmeplay.core.gui;
 
 import javax.annotation.PostConstruct;
 
+import javafx.scene.control.Label;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -33,26 +34,26 @@ public class EditorBuilderCenter {
      */
     @PostConstruct
     private void init() {
-        initCenterBorderPane();
+        centerBorderPane = new BorderPane();
+        buiderBottomInfoBar.getViewModeSwitcher().addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+            updateCenterBorderPane();
+        });
+        updateCenterBorderPane();
     }
 
     /**
-     * Initialize border pane an set left, right, bottom and center view
+     * Update border pane an set left, right, bottom and center view
      */
-    private void initCenterBorderPane() {
-        centerBorderPane = new BorderPane();
-        buiderBottomInfoBar.getViewModeSwitcher().addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
-            initCenterBorderPane();
-        });
+    private void updateCenterBorderPane() {
         if (buiderBottomInfoBar.isVisible()) {
             centerBorderPane.setLeft(editorBuilderCenterBorderBar.borderBarLeft());
             centerBorderPane.setRight(editorBuilderCenterBorderBar.borderBarRight());
             centerBorderPane.setBottom(editorBuilderCenterBorderBar.borderBarBottom());
             centerBorderPane.setCenter(editorBuilderCenterCenter.view());
         } else {
-            centerBorderPane.setLeft(null);
-            centerBorderPane.setRight(null);
-            centerBorderPane.setBottom(null);
+            centerBorderPane.getChildren().remove(editorBuilderCenterBorderBar.borderBarLeft());
+            centerBorderPane.getChildren().remove(editorBuilderCenterBorderBar.borderBarRight());
+            centerBorderPane.getChildren().remove(editorBuilderCenterBorderBar.borderBarBottom());
         }
     }
 

@@ -5,9 +5,10 @@ import com.jmeplay.core.Position;
 import com.jmeplay.core.handler.FileHandler;
 import com.jmeplay.core.utils.ImageLoader;
 import javafx.scene.Node;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
 import javafx.scene.layout.StackPane;
-import javafx.util.Callback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +20,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Function;
 
 /**
  * Create AssetEditorComponent to load and view all assets in tree view
@@ -43,7 +43,7 @@ public class AssetsComponent extends EditorComponent {
     private AssetsImageDefinder assetsImageDefinder;
 
     @Autowired(required = false)
-    private List<FileHandler> fileHandlers;
+    private List<FileHandler<TreeView<Path>>> fileHandlers;
 
     @PostConstruct
     private void init() {
@@ -96,7 +96,6 @@ public class AssetsComponent extends EditorComponent {
         treeView = new TreeView<>(rootTreeItem);
         treeView.setCellFactory(param -> new AssetsTreeCell(fileHandlers));
     }
-
 
     /**
      * Recursively create the tree

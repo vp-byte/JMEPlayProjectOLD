@@ -5,6 +5,7 @@ import com.jmeplay.core.utils.PathResolver;
 import javafx.geometry.Side;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TreeView;
 import javafx.scene.control.cell.TextFieldTreeCell;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -20,10 +21,10 @@ import java.util.stream.Collectors;
  * @author vp-byte (Vladimir Petrenko)
  */
 public class AssetsTreeCell extends TextFieldTreeCell<Path> {
-    private List<FileHandler> fileHandlers = null;
+    private List<FileHandler<TreeView<Path>>> fileHandlers = null;
     private ContextMenu contextMenu = null;
 
-    public AssetsTreeCell(List<FileHandler> fileHandlers) {
+    public AssetsTreeCell(List<FileHandler<TreeView<Path>>> fileHandlers) {
         this.fileHandlers = fileHandlers;
 
         // event handling
@@ -72,7 +73,7 @@ public class AssetsTreeCell extends TextFieldTreeCell<Path> {
         return null;
     }
 
-    private List<FileHandler> filterFileHandler(List<FileHandler> fileHandlers) {
+    private List<FileHandler<TreeView<Path>>> filterFileHandler(List<FileHandler<TreeView<Path>>> fileHandlers) {
         String fileExtension = PathResolver.resolveExtension(getItem());
         return fileHandlers.stream().filter(fileHandler -> {
             if (fileExtension != null && fileExtension.equals(fileHandler.filetype())) {
