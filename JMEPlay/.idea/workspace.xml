@@ -2,105 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMEPlayAnimation.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMEPlayAnimationOptimazed.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMEPlayAnimationOptimazedScaled.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMEPlayAnimationOrder.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMEPlayAnimationOrderScaled.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMEPlaySplashscreen.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMEPlaySplashscreenMerge.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMEPlaySplashscreenReady.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMEPlaySplashscreenReadyPowered.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/JMESplashscreen.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/001.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/002.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/003.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/004.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/005.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/006.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/007.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/008.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/009.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/010.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/011.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/012.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/013.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/014.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/015.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/016.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/017.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/018.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/019.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/020.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/021.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/022.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/023.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/024.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/025.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/026.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/027.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/028.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/029.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/030.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/031.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/032.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/033.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/034.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/035.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/036.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/037.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/038.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/039.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/040.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/041.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/042.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/images/043.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/00.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/08.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/09.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/31.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/33.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/34.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/35.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/36.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/37.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/38.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/39.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/41.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JMEPlay Splashscreen/imagesOptimazed/42.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/await.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/assets/AssetsImageDefinder.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/assets/AssetsImageDefinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/console/JMEPlayConsoleComponent.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/console/JMEPlayConsoleComponent.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JMEPlayDoc" afterPath="$PROJECT_DIR$/../JMEPlayDoc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -891,9 +792,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -901,56 +799,14 @@
               <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
               <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
-            <path>
-              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1145,18 +1001,6 @@
       </option>
       <envs />
       <patterns />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JMEPlay" />
-      <envs />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -1374,6 +1218,18 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JMEPlay" />
+      <envs />
+    </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="filePath" />
@@ -1543,7 +1399,8 @@
       <workItem from="1500972117984" duration="611000" />
       <workItem from="1500984717143" duration="5359000" />
       <workItem from="1500991635282" duration="1881000" />
-      <workItem from="1500993832985" duration="42000" />
+      <workItem from="1500993832985" duration="115000" />
+      <workItem from="1501004118201" duration="584000" />
     </task>
     <task id="LOCAL-00001" summary="Add Copy and Select All function to JMEPlayConsole">
       <created>1500652278113</created>
@@ -1672,7 +1529,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166096000" />
+    <option name="totallyTimeSpent" value="166753000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1699,7 +1556,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32065654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3242594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
