@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1.66646in" height="1.66646in"
+     viewBox="0 0 120 120">
+  <path id="lefttop"
+        fill="#03ae93" stroke="black" stroke-width="3"
+        d="M 60.00,10.00
+           C 30.00,10.00 10.00,30.00 10.00,60.00
+             10.00,60.00 60.00,60.00 60.00,60.00
+             60.00,60.00 60.00,10.00 60.00,10.00 Z" />
+  <path id="rightbottom"
+        fill="#ffcc00" stroke="black" stroke-width="3"
+        d="M 60.00,60.00
+           C 60.00,60.00 60.00,110.00 60.00,110.00
+             90.00,110.00 110.00,90.00 110.00,60.00
+             110.00,60.00 60.00,60.00 60.00,60.00 Z" />
+  <path id="righttop"
+        fill="#0268fd" stroke="black" stroke-width="3"
+        d="M 60.00,10.00
+           C 90.00,10.00 110.00,30.00 110.00,60.00
+             90.00,60.00 80.00,60.00 60.00,60.00
+             60.00,30.00 60.00,20.00 60.00,10.00 Z" />
+  <path id="leftbottom"
+        fill="#f90708" stroke="black" stroke-width="3"
+        d="M 60.00,110.00
+           C 60.00,110.00 60.00,60.00 60.00,60.00
+             60.00,60.00 10.00,60.00 10.00,60.00
+             10.00,90.00 30.00,110.00 60.00,110.00 Z" />
+</svg>
