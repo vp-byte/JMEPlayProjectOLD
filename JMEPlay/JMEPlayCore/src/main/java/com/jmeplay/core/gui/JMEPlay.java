@@ -27,6 +27,8 @@ import javafx.stage.Stage;
 @ComponentScan({"com.jmeplay.core", "com.jmeplay.plugin"})
 public class JMEPlay extends Application {
 
+    private Stage stage;
+
     private ConfigurableApplicationContext appContext;
 
     @Value("${application.name}")
@@ -69,15 +71,16 @@ public class JMEPlay extends Application {
      */
     @Override
     public void start(Stage stage) throws Exception {
+        this.stage = stage;
         String title = applicationName + " (" + jmeVersion + ")";
         stage.setTitle(title);
         stage.setScene(editorBuilder.getScene());
         stage.setMinWidth(800);
         stage.setMinHeight(600);
-        stage.show();
         stage.setMaximized(true);
         editorBuilder.initEditor();
-        //showSplashscreen();
+        stage.show();
+        //new Thread(() -> Platform.runLater(() -> showSplashscreen())).start();
     }
 
     /**
@@ -91,25 +94,28 @@ public class JMEPlay extends Application {
     }
 
     private void showSplashscreen() {
-        Stage stage = new Stage();
+        Stage splashscreenStage = new Stage();
         Group root = new Group();
         Scene scene = new Scene(root);
         Image image = new Image(JMEPlay.class.getClass().getResourceAsStream("/images/splashscreen/JMEPlaySplashscreen.gif"));
         ImageView imageView = new ImageView(image);
         root.getChildren().add(imageView);
-        stage.setScene(scene);
-        stage.setMaxHeight(image.getHeight());
-        stage.setMaxWidth(image.getWidth());
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.show();
+        splashscreenStage.setScene(scene);
+        splashscreenStage.setMaxHeight(image.getHeight());
+        splashscreenStage.setMaxWidth(image.getWidth());
+        splashscreenStage.initStyle(StageStyle.UNDECORATED);
+        splashscreenStage.initModality(Modality.APPLICATION_MODAL);
+        splashscreenStage.show();
         new Thread(() -> {
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            Platform.runLater(() -> stage.hide());
+            Platform.runLater(() -> {
+                splashscreenStage.hide();
+                stage.show();
+            });
         }).start();
 
     }
