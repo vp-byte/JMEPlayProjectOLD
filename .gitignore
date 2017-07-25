@@ -1,5 +1,7 @@
-.idea
+.idea/
+JMEPlay/build/
+JMEPlay/out/
 JMEPlayCore/build/
-JMEPlayCore/build/out/
+JMEPlayCore/out/
 JMEPlayDefinition/build/
 JMEPlayDefinition/out/
