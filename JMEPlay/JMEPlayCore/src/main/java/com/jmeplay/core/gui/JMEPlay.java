@@ -72,10 +72,12 @@ public class JMEPlay extends Application {
         String title = applicationName + " (" + jmeVersion + ")";
         stage.setTitle(title);
         stage.setScene(editorBuilder.getScene());
-        stage.setMaximized(true);
+        stage.setMinWidth(800);
+        stage.setMinHeight(600);
         stage.show();
+        stage.setMaximized(true);
         editorBuilder.initEditor();
-        //showSplashScreen();
+        //showSplashscreen();
     }
 
     /**
@@ -88,12 +90,11 @@ public class JMEPlay extends Application {
         appContext.stop();
     }
 
-    private void showSplashScreen() {
+    private void showSplashscreen() {
         Stage stage = new Stage();
         Group root = new Group();
         Scene scene = new Scene(root);
-        Image image = new Image(JMEPlay.class.getClass().getResourceAsStream("/images/plugin/assets/splashscreen/JMEPlaySplashscreen.gif"));
-
+        Image image = new Image(JMEPlay.class.getClass().getResourceAsStream("/images/splashscreen/JMEPlaySplashscreen.gif"));
         ImageView imageView = new ImageView(image);
         root.getChildren().add(imageView);
         stage.setScene(scene);
