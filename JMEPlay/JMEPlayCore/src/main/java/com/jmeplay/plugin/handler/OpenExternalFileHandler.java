@@ -119,7 +119,7 @@ public class OpenExternalFileHandler extends FileHandler<TreeView<Path>> {
                 Process process = processBuilder.start();
                 Reader in = new InputStreamReader(process.getErrorStream(), "UTF-8");
                 BufferedReader reader = new BufferedReader(in);
-                if (reader.lines() != null) {
+                if (reader.lines() != null && reader.lines().count() > 0) {
                     throw new IllegalStateException(reader.readLine());
                 }
             } catch (Exception ex) {
