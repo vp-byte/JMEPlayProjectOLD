@@ -1,0 +1,21 @@
+/*
+ * JMEPlayAssets
+ */
+
+apply plugin: 'application'
+apply plugin: 'java'
+
+def junit = [v: '4.12']
+def spring_boot = [v: '1.5.2.RELEASE']
+def jme3 = [v: '3.2_branch-SNAPSHOT']
+
+dependencies {
+    // Use JUnit test framework
+    testCompile("junit:junit:${junit.v}")
+
+    // Use Spring-Framework
+    compile("org.springframework.boot:spring-boot-starter:${spring_boot.v}")
+    testCompile("org.springframework.boot:spring-boot-starter-test:${spring_boot.v}")
+
+    compile project(':JMEPlayDefinition')
+}

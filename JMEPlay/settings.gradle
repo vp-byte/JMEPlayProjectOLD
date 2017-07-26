@@ -1,5 +1,8 @@
+rootProject.name = 'JMEPlay'
 
 include 'JMEPlayCore'
 include 'JMEPlayDefinition'
+include 'JMEPlayAssets'
 
-rootProject.name = 'JMEPlay'
+
+

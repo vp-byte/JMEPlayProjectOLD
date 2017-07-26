@@ -1,23 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/await.svg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/assets/AssetsImageDefinder.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/assets/AssetsImageDefinder.class" />
+    <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="Move assets to JMEPlayAssets project">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/JMEPlayAssets.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/JMEPlayAssets/JMEPlayAssets_main.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/JMEPlayAssets/JMEPlayAssets_test.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JMEPlayAssets/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/Resources.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_JavaSaBr_jmonkeyengine_jme3_desktop_3_2_branch_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_glfw_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_jemalloc_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_openal_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_opencl_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_lwjgl_lwjgl_opengl_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/assets/AssetsComponent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/assets/AssetsImageDefinder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/assets/AssetsTreeCell.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/CopyFileHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/CutFileHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler$DeleteFileVisitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/DeleteFileHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/OpenExternalFileHandler$ProcessRunner.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/OpenExternalFileHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/OpenFileHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/PasteFileHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/plugin/handler/RenameFileHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/assets.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/file.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/folder.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/font.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/image.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/monkey.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/music.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/handler/copy.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/handler/cut.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/handler/delete.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/handler/open.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/handler/openexternal.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/handler/paste.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/handler/rename.svg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsComponent.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui/AssetsComponent.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsImageDefinder.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui/AssetsImageDefinder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsTreeCell.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui/AssetsTreeCell.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/CopyFileHandler.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/CopyFileHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/CutFileHandler.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/CutFileHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/DeleteFileHandler.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/DeleteFileHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/OpenExternalFileHandler.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/OpenExternalFileHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/OpenFileHandler.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/OpenFileHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/PasteFileHandler.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/PasteFileHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/RenameFileHandler.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/RenameFileHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/assets.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/assets.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/file.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/file.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/folder.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/folder.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/font.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/font.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/image.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/image.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/material.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/material.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/monkey.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/monkey.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/music.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/music.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/handler/copy.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/handler/copy.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/handler/cut.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/handler/cut.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/handler/delete.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/handler/delete.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/handler/open.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/handler/open.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/handler/openexternal.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/handler/openexternal.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/handler/paste.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/handler/paste.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/handler/rename.svg" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/handler/rename.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/EditorBuiderBottomInfoBar.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/EditorBuiderBottomInfoBar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayDefinition/out/production/classes/com/jmeplay/core/utils/ImageLoader.class" afterPath="$PROJECT_DIR$/JMEPlayDefinition/out/production/classes/com/jmeplay/core/utils/ImageLoader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JMEPlayDoc" afterPath="$PROJECT_DIR$/../JMEPlayDoc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/assets.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/assets.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/file.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/file.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/folder.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/folder.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/font.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/font.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/image.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/image.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/material.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/resources/icons/assets/material.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/assets.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/assets.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/file.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/file.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/folder.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/folder.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/font.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/font.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/image.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/image.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/material.svg" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/material.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/build.gradle" afterPath="$PROJECT_DIR$/JMEPlayCore/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuiderBottomInfoBar.java" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuiderBottomInfoBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/ImageLoader.java" afterPath="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/ImageLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -27,6 +90,9 @@
     <ignored path="$PROJECT_DIR$/JMEPlayDefinition/build/" />
     <ignored path="$PROJECT_DIR$/JMEPlayCore/out/" />
     <ignored path="$PROJECT_DIR$/JMEPlayDefinition/out/" />
+    <ignored path="$PROJECT_DIR$/JMEPlayAssets/.gradle/" />
+    <ignored path="$PROJECT_DIR$/JMEPlayAssets/build/" />
+    <ignored path="$PROJECT_DIR$/JMEPlayAssets/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +108,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/JMEPlayCore">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -57,7 +126,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -117,6 +186,10 @@
               <ExternalProjectPojo>
                 <option name="name" value="JMEPlay" />
                 <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":JMEPlayAssets" />
+                <option name="path" value="$PROJECT_DIR$/JMEPlayAssets" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value=":JMEPlayCore" />
@@ -299,6 +372,167 @@
               <ExternalTaskPojo>
                 <option name="description" value="Displays the properties of root project 'JMEPlay'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/JMEPlayAssets">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':JMEPlayAssets'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':JMEPlayAssets'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in project ':JMEPlayAssets'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':JMEPlayAssets'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a JVM application" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="run" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="startScripts" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':JMEPlayAssets'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the project as a distribution as-is." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="installDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':JMEPlayAssets'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the main distributions" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="assembleDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':JMEPlayAssets'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':JMEPlayAssets'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="distTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
+                <option name="name" value="distZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':JMEPlayAssets'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/JMEPlayAssets" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
             </list>
@@ -600,7 +834,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6000181766000" />
+        <entry key="$PROJECT_DIR$" value="7503041277000" />
         <entry key="$PROJECT_DIR$/JMEPlayCore/build.gradle" value="2720005846" />
       </map>
     </option>
@@ -615,6 +849,13 @@
                     <value>
                       <ExternalModuleBuildClasspathPojo>
                         <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/JMEPlayAssets">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/JMEPlayAssets" />
                       </ExternalModuleBuildClasspathPojo>
                     </value>
                   </entry>
@@ -722,30 +963,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/CopyHandler.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/image.svg" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/MyTreeCell.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetEditorTreeCell.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsEditorComponent.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/CopyFileHandler.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsFileHandlerDefinder.java" />
-        <option value="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/PathResolver.java" />
-        <option value="$PROJECT_DIR$/settings.xml" />
-        <option value="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/Position.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/BorderBar.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuiderInfoBar.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderCenterBorderBar.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderCenterCenter.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderTop.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderTopToolBar.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderTopMenuBar.java" />
-        <option value="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/InfoMessage.java" />
-        <option value="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/BottomInfoMessage.java" />
-        <option value="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/handler/FileHandler.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/PasteFileHandler.java" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/console/ConsoleEditorComponent.java" />
         <option value="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/Console.java" />
-        <option value="$PROJECT_DIR$/JMEPlayCore/build.gradle" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/test/java/JavaKeywordsAsync.java" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/console/jmeplay-console.css" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/test/java/JavaKeywords.java" />
@@ -767,12 +986,34 @@
         <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/DeleteFileHandler.java" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/OpenExternFileHandler.java" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/test/java/Indicators.java" />
-        <option value="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/ImageLoader.java" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/console/JMEPlayConsoleComponent.java" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/OpenExternalFileHandler.java" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsImageDefinder.java" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/JMEPlay.java" />
         <option value="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/file.svg" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/build.gradle" />
+        <option value="$PROJECT_DIR$/JMEPlayCore/build.gradle" />
+        <option value="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/ImageLoader.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/Resources.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/CopyFileHandler.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/CutFileHandler.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/DeleteFileHandler.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/OpenExternalFileHandler.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/OpenFileHandler.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/PasteFileHandler.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/RenameFileHandler.java" />
+        <option value="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuiderBottomInfoBar.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui/AssetsTreeCell.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui/AssetsImageDefinder.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui/AssetsComponent.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/material.svg" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/assets.svg" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/file.svg" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/folder.svg" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/font.svg" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/image.svg" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/music.svg" />
       </list>
     </option>
   </component>
@@ -806,8 +1047,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -819,52 +1061,25 @@
             <path>
               <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
               <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="JMEPlayAssets" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
               <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="JMEPlayAssets" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
               <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="JMEPlayAssets" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
               <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jmeplay" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jmeplay" type="462c0819:PsiDirectoryNode" />
-              <item name="plugin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="JMEPlayAssets" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -872,7 +1087,7 @@
             <path>
               <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
               <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="JMEPlayAssets" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -881,17 +1096,27 @@
             <path>
               <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
               <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="JMEPlayCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="JMEPlayAssets" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JMEPlay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JMEPlay" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="JMEPlayAssets" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -913,16 +1138,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/JMEPlayAssets/src" />
       <recent name="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets" />
       <recent name="$PROJECT_DIR$/JMEPlayCore/src/main/resources/images/plugin/assets/splashscreen" />
       <recent name="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler" />
       <recent name="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/handler" />
-      <recent name="$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/hander" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jmeplay.plugin.handler" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui" />
       <recent name="$PROJECT_DIR$/JMEPlayCore/src/main/resources/jmeplay/css/plugin" />
     </key>
   </component>
@@ -1422,7 +1648,7 @@
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1500555253846" />
+    <option name="lastUpdateTimestamp" value="1501083821274" />
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -1487,7 +1713,9 @@
       <workItem from="1500993832985" duration="115000" />
       <workItem from="1501004118201" duration="584000" />
       <workItem from="1501053485974" duration="10072000" />
-      <workItem from="1501081819387" duration="261000" />
+      <workItem from="1501081819387" duration="1706000" />
+      <workItem from="1501083542970" duration="691000" />
+      <workItem from="1501090168535" duration="1198000" />
     </task>
     <task id="LOCAL-00001" summary="Add Copy and Select All function to JMEPlayConsole">
       <created>1500652278113</created>
@@ -1580,7 +1808,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500991963438</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Replace some icons with color icons">
+      <created>1501082114613</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1501082114613</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1616,7 +1851,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177086000" />
+    <option name="totallyTimeSpent" value="180420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1632,20 +1867,21 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299373" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1981132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43160376" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3318655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33987188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4779874" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1661,7 +1897,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4779874" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1680,7 +1915,9 @@
     <MESSAGE value="Add gitignore config" />
     <MESSAGE value="Working Splashscreen" />
     <MESSAGE value="Bugfix for JMEPlayConsole" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugfix for JMEPlayConsole" />
+    <MESSAGE value="Replace some icons with color icons" />
+    <MESSAGE value="Move assets to JMEPlayAssets project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move assets to JMEPlayAssets project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1693,190 +1930,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/jmeplay/css/editor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.7.RELEASE/1b08f5c49f9794a597455c280eff37acdb221d03/spring-beans-4.3.7.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="587" column="0" lean-forward="false" selection-start-line="587" selection-start-column="0" selection-end-line="587" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102463">
-          <caret line="768" column="19" lean-forward="false" selection-start-line="768" selection-start-column="19" selection-end-line="768" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/test/java/TestMe.java" />
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/jmeplay/css/plugin/jmeplay-console.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.fxmisc.richtext/richtextfx/0.7-M5/c18d2ca4cbbce027b8ff014aa2646f5812b8800b/richtextfx-0.7-M5-sources.jar!/org/fxmisc/richtext/ClipboardActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/console/JavaKeywords.java" />
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/PropertyEditorComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/test/java/com/jmeplay/GenerateUUID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/UUID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="140" column="23" lean-forward="false" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.fxmisc.richtext/richtextfx/0.7-M5/c18d2ca4cbbce027b8ff014aa2646f5812b8800b/richtextfx-0.7-M5-sources.jar!/org/fxmisc/richtext/CodeArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderTop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderCenterCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1892">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/EditorComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/PasteFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="65" column="27" lean-forward="false" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.JavaSaBr.jmonkeyengine/jme3-core/3.2_branch-SNAPSHOT/99f2521b649b8d2984362d0e739ed7076118b1ec/jme3-core-3.2_branch-SNAPSHOT-sources.jar!/com/jme3/scene/shape/Box.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderCenterBorderBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1191">
-          <caret line="248" column="16" lean-forward="false" selection-start-line="248" selection-start-column="16" selection-end-line="248" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/BorderBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="55" column="98" lean-forward="false" selection-start-line="55" selection-start-column="98" selection-end-line="55" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuiderBottomInfoBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="53" column="12" lean-forward="false" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/RenameFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/CopyFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/CutFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/awt/Desktop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="79" column="13" lean-forward="false" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/handler/FileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/ProcessBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="1003" column="18" lean-forward="false" selection-start-line="1003" selection-start-column="11" selection-end-line="1003" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Process.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -1892,13 +1945,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/test/java/Indicators.java" />
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsComponent.java" />
     <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/images/splashscreen/JMEPlaySplashscreen.gif">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1911,20 +1958,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/ImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/DeleteFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="62" column="32" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/handler/DeleteFileHandler.java" />
     <entry file="file://$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/JMEPlayConsole.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1939,28 +1973,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/OpenExternalFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="129" column="5" lean-forward="false" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/handler/OpenExternalFileHandler.java" />
     <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/await.svg" />
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsTreeCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsImageDefinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="66" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsTreeCell.java" />
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/AssetsImageDefinder.java" />
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -1968,70 +1984,249 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/folder.svg">
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/folder.svg" />
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/assets.svg" />
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/font.svg" />
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/image.svg" />
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/material.svg" />
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/file.svg" />
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/assets/handler/OpenFileHandler.java" />
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/core/gui/JMEPlay.java" />
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/assets.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/JMEPlay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
+        <state relative-caret-position="1100">
           <caret line="66" column="34" lean-forward="true" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/font.svg">
+    <entry file="file://$PROJECT_DIR$/JMEPlayDefinition/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/image.svg">
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="2" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/material.svg">
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/resources/icons/assets/file.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/plugin/handler/OpenFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+        <state relative-caret-position="308">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/Resources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/CopyFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/CutFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/DeleteFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-748">
+          <caret line="67" column="84" lean-forward="false" selection-start-line="67" selection-start-column="84" selection-end-line="67" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/OpenExternalFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="68" column="84" lean-forward="false" selection-start-line="68" selection-start-column="84" selection-end-line="68" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/OpenFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="39" column="84" lean-forward="false" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/PasteFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="48" column="84" lean-forward="false" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/handler/RenameFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="39" column="84" lean-forward="false" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui/AssetsTreeCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui/AssetsImageDefinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/assets.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/assets/gui/AssetsComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="97" column="45" lean-forward="false" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuiderBottomInfoBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="66" column="12" lean-forward="false" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/file.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/folder.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/font.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/image.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/material.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/music.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/assets/monkey.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/handler/cut.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/resources/plugin/assets/icons/handler/copy.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

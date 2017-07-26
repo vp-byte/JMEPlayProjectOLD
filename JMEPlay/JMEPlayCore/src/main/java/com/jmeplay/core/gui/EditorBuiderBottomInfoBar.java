@@ -66,7 +66,7 @@ public class EditorBuiderBottomInfoBar implements BottomInfoMessage {
         if (!visible) {
             imagePath = "/icons/infobar/enable.svg";
         }
-        return ImageLoader.initImageView(imagePath, size - 4, size - 4);
+        return ImageLoader.initImageView(this.getClass(), imagePath, size - 4, size - 4);
     }
 
     /**

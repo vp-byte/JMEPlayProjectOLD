@@ -32,4 +32,5 @@ dependencies {
     compile "org.fxmisc.richtext:richtextfx:0.7-M5"
 
     compile project(':JMEPlayDefinition')
+    compile project(':JMEPlayAssets')
 }
