@@ -16,8 +16,8 @@ import java.nio.file.Path;
  * @author vp-byte (Vladimir Petrenko)
  */
 @Component
-@Order(value = 0)
-public class OpenFileHandler extends FileHandler<TreeView<Path>> {
+@Order(value = 2)
+public class OpenTextFileHandler extends FileHandler<TreeView<Path>> {
     private int size = 24;
 
     @Override
@@ -27,17 +27,17 @@ public class OpenFileHandler extends FileHandler<TreeView<Path>> {
 
     @Override
     public String name() {
-        return "Open";
+        return "Open in Texteditor";
     }
 
     @Override
     public String description() {
-        return "Open file";
+        return "Open file in Texteditor";
     }
 
     @Override
     public ImageView image() {
-        return ImageLoader.initImageView(this.getClass(), Resources.iconsHandler + "open.svg", size, size);
+        return ImageLoader.initImageView(this.getClass(), Resources.iconsHandler + "openastxt.svg", size, size);
     }
 
     @Override

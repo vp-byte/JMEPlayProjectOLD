@@ -26,13 +26,13 @@ import java.util.List;
  * @author vp-byte (Vladimir Petrenko)
  */
 @Component
-@Order(value = 2)
+@Order(value = 1)
 public class OpenExternalFileHandler extends FileHandler<TreeView<Path>> {
     private int size = 24;
     private static String OS = System.getProperty("os.name").toLowerCase();
 
     @Autowired
-    JMEPlayConsole jmePlayConsole;
+    private JMEPlayConsole jmePlayConsole;
 
     /**
      * {@link FileHandler:filetype}
@@ -66,7 +66,7 @@ public class OpenExternalFileHandler extends FileHandler<TreeView<Path>> {
      */
     @Override
     public ImageView image() {
-        return ImageLoader.initImageView(this.getClass(), Resources.iconsHandler + "penexternal.svg", size, size);
+        return ImageLoader.initImageView(this.getClass(), Resources.iconsHandler + "openexternal.svg", size, size);
     }
 
     /**

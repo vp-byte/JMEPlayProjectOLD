@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+        "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="1.66667in" height="1.66667in"
+<svg width="1.66667in" height="1.66667in"
      viewBox="0 0 120 120">
-  <path id="wall"
-        fill="none" stroke="black" stroke-width="5"
-        d="M 100.00,60.00
+    <path id="wall"
+          fill="#ffffff" stroke="black" stroke-width="5"
+          d="M 100.00,60.00
            C 100.00,80.00 80.00,100.00 60.00,100.00
              40.00,100.00 20.00,80.00 20.00,60.00
-             20.00,40.00 40.00,20.00 60.00,20.00" />
-  <path id="arrow"
-        fill="none" stroke="black" stroke-width="10"
-        d="M 80.00,20.00
+             20.00,40.00 40.00,20.00 60.00,20.00"/>
+    <path id="arrow"
+          fill="none" stroke="black" stroke-width="10"
+          d="M 80.00,20.00
            C 80.00,20.00 100.00,20.00 100.00,20.00
              100.00,20.00 100.00,40.00 100.00,40.00M 60.00,60.00
-           C 60.00,60.00 99.63,20.36 99.63,20.36" />
+           C 60.00,60.00 99.63,20.36 99.63,20.36"/>
 </svg>
