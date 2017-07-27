@@ -1,17 +1,28 @@
 package com.jmeplay.plugin.assets.handler;
 
+import com.jmeplay.core.JMEPlayConsole;
 import com.jmeplay.core.handler.FileHandler;
 import com.jmeplay.core.utils.ImageLoader;
 import com.jmeplay.plugin.assets.Resources;
+import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.DataFormat;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 import static java.util.Collections.singletonList;
 
@@ -24,6 +35,9 @@ import static java.util.Collections.singletonList;
 @Order(value = 3)
 public class CopyFileHandler extends FileHandler<TreeView<Path>> {
     private int size = 24;
+
+    @Autowired
+    private JMEPlayConsole jmePlayConsole;
 
     @Override
     public String filetype() {
@@ -47,12 +61,13 @@ public class CopyFileHandler extends FileHandler<TreeView<Path>> {
 
     @Override
     public void handle(Path path, TreeView<Path> source) {
-        final ClipboardContent content = new ClipboardContent();
+        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.WARN, "Copy" + path + " to clipboard");
+
+        ClipboardContent content = new ClipboardContent();
         content.putFiles(singletonList(path.toFile()));
-        content.put(DataFormat.FILES, "copy");
 
-        final Clipboard clipboard = Clipboard.getSystemClipboard();
-
+        Clipboard clipboard = Clipboard.getSystemClipboard();
         clipboard.setContent(content);
     }
+
 }
