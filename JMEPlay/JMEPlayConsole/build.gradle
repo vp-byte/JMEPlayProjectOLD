@@ -7,6 +7,7 @@ apply plugin: 'java'
 
 def junit = [v: '4.12']
 def spring_boot = [v: '1.5.2.RELEASE']
+def richtextfx = [v: '0.7-M5']
 
 dependencies {
     // Use JUnit test framework
@@ -15,6 +16,9 @@ dependencies {
     // Use Spring-Framework
     compile("org.springframework.boot:spring-boot-starter:${spring_boot.v}")
     testCompile("org.springframework.boot:spring-boot-starter-test:${spring_boot.v}")
+
+    // ConsolePlugin
+    compile "org.fxmisc.richtext:richtextfx:${richtextfx.v}"
 
     compile project(':JMEPlayDefinition')
 }

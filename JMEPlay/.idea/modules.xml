@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayAssets.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayAssets.iml" group="JMEPlayAssets" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayAssets/JMEPlayAssets_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayAssets/JMEPlayAssets_main.iml" group="JMEPlayAssets" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayAssets/JMEPlayAssets_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayAssets/JMEPlayAssets_test.iml" group="JMEPlayAssets" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayConsole.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayConsole.iml" group="JMEPlayConsole" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayConsole/JMEPlayConsole_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayConsole/JMEPlayConsole_main.iml" group="JMEPlayConsole" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayConsole/JMEPlayConsole_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayConsole/JMEPlayConsole_test.iml" group="JMEPlayConsole" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore.iml" group="JMEPlayCore" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_main.iml" group="JMEPlayCore" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_test.iml" group="JMEPlayCore" />

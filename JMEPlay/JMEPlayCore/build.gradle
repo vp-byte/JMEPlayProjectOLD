@@ -28,9 +28,7 @@ dependencies {
     // Use JavaFX for JME3
     compile "com.github.JavaSaBr:JME3-JFX:${jme3jfx.v}"
 
-    // ConsolePlugin
-    compile "org.fxmisc.richtext:richtextfx:0.7-M5"
-
     compile project(':JMEPlayDefinition')
     compile project(':JMEPlayAssets')
+    compile project(':JMEPlayConsole')
 }

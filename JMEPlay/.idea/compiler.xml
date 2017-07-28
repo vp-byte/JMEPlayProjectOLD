@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="JMEPlayAssets_main" target="1.8" />
       <module name="JMEPlayAssets_test" target="1.8" />
+      <module name="JMEPlayConsole_main" target="1.8" />
+      <module name="JMEPlayConsole_test" target="1.8" />
       <module name="JMEPlayCore_main" target="1.8" />
       <module name="JMEPlayCore_test" target="1.8" />
       <module name="JMEPlayDefinition_main" target="1.8" />
