@@ -51,7 +51,7 @@ public class CutFileHandler extends FileHandler<TreeView<Path>> {
 
     @Override
     public void handle(Path path, TreeView<Path> source) {
-        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.WARN, "Cut" + path + " to clipboard");
+        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Cut" + path + " to clipboard");
 
         ClipboardContent content = new ClipboardContent();
         content.putFiles(singletonList(path.toFile()));

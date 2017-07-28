@@ -105,6 +105,7 @@ public class JMEPlayConsoleToolBar extends VBox {
         buttonClear.setTooltip(new Tooltip("Clear whole text"));
         buttonClear.setDisable(true);
         buttonClear.setOnAction(event -> {
+            jmePlayConsoleComponent.clear();
             jmePlayConsoleArea.clear();
             updateButtons();
         });

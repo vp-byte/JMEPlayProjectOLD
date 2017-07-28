@@ -90,13 +90,10 @@ public class JMEPlayConsoleArea extends CodeArea {
     }
 
     /**
-     * Write massage to code area
-     * {@link JMEPlayConsole:writeMessage}
+     * Write text to code area
      */
-    public void writeMessage(JMEPlayConsole.MessageType messageType, String message) {
-        String text = "\n[" + messageType.name() + "] : " + message;
-        String textAreaText = this.getText();
-        this.replaceText(text + textAreaText);
+    public void writeText(String message) {
+        this.replaceText(message);
         this.setStyleSpans(0, computeHighlighting(this.getText()));
     }
 

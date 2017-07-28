@@ -3,14 +3,10 @@ package com.jmeplay.plugin.console;
 import com.jmeplay.core.EditorComponent;
 import com.jmeplay.core.JMEPlayConsole;
 import com.jmeplay.core.Position;
-import com.jmeplay.core.utils.ImageLoader;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.Tooltip;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -30,6 +26,7 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
     private final String name = "Console";
     private final String description = "Component to magage console output";
     private boolean writeException = false;
+    private StringBuilder stringBuilder = new StringBuilder();
     private Label label;
     private StackPane stackPane;
     private BorderPane borderPane;
@@ -97,11 +94,13 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
     }
 
     /**
-     * {@link JMEPlayConsole:writeMessage}
+     * {@link JMEPlayConsole:writeText}
      */
     @Override
     public void writeMessage(MessageType messageType, String message) {
-        jmePlayConsoleArea.writeMessage(messageType, message);
+        String text = "\n[" + messageType.name() + "] : " + message;
+        stringBuilder.insert(0, text);
+        jmePlayConsoleArea.writeText(stringBuilder.toString());
         jmePlayConsoleToolBar.updateButtons();
     }
 
@@ -115,6 +114,12 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
         }
     }
 
+    /**
+     * Clear text buffer
+     */
+    public void clear() {
+        stringBuilder = new StringBuilder();
+    }
 
     /**
      * Convert exception stack trace to string

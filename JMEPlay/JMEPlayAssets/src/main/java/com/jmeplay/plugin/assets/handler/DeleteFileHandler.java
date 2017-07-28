@@ -83,7 +83,7 @@ public class DeleteFileHandler extends FileHandler<TreeView<Path>> {
         if (result.isPresent() && result.get() == ButtonType.OK) {
             try {
                 executeDelete();
-                jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Delete " + path + " from project success");
+                jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Delete " + path + " from project");
             } catch (IOException ex) {
                 jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.ERROR, "Delete " + path + " from project fail");
                 jmePlayConsole.writeException(ex);

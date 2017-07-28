@@ -123,8 +123,9 @@ public class OpenExternalFileHandler extends FileHandler<TreeView<Path>> {
                 if (reader.lines() != null && reader.lines().count() > 0) {
                     throw new IllegalStateException(reader.readLine());
                 }
+                jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Open external file " + path);
             } catch (Exception ex) {
-                jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.ERROR, "Can't open file " + path);
+                jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.ERROR, "Can't open external file " + path);
                 jmePlayConsole.writeException(ex);
             }
         }

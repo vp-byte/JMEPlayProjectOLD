@@ -61,7 +61,7 @@ public class CopyFileHandler extends FileHandler<TreeView<Path>> {
 
     @Override
     public void handle(Path path, TreeView<Path> source) {
-        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.WARN, "Copy" + path + " to clipboard");
+        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Copy" + path + " to clipboard");
 
         ClipboardContent content = new ClipboardContent();
         content.putFiles(singletonList(path.toFile()));

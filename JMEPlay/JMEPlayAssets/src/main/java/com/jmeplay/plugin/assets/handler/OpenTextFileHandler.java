@@ -1,10 +1,12 @@
 package com.jmeplay.plugin.assets.handler;
 
+import com.jmeplay.core.JMEPlayConsole;
 import com.jmeplay.core.handler.FileHandler;
 import com.jmeplay.core.utils.ImageLoader;
 import com.jmeplay.plugin.assets.Resources;
 import javafx.scene.control.TreeView;
 import javafx.scene.image.ImageView;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +21,9 @@ import java.nio.file.Path;
 @Order(value = 2)
 public class OpenTextFileHandler extends FileHandler<TreeView<Path>> {
     private int size = 24;
+
+    @Autowired
+    private JMEPlayConsole jmePlayConsole;
 
     @Override
     public String filetype() {
@@ -42,6 +47,6 @@ public class OpenTextFileHandler extends FileHandler<TreeView<Path>> {
 
     @Override
     public void handle(Path path, TreeView<Path> source) {
-        System.out.println(path);
+        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.ERROR, "Open file " + path + " in text editor");
     }
 }
