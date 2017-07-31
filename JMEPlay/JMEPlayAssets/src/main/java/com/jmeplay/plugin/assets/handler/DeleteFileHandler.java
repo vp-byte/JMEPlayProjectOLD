@@ -19,7 +19,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.List;
 import java.util.Optional;
+
+import static java.util.Collections.singletonList;
 
 /**
  * Handler to delete file from file system and tree view
@@ -40,8 +43,8 @@ public class DeleteFileHandler extends FileHandler<TreeView<Path>> {
      * {@link FileHandler:filetype}
      */
     @Override
-    public String filetype() {
-        return FileHandler.any;
+    public List<String> filetypes() {
+        return singletonList(FileHandler.any);
     }
 
     /**
@@ -120,7 +123,7 @@ public class DeleteFileHandler extends FileHandler<TreeView<Path>> {
     }
 
     /**
-     * FileVisitor to delete files or folders
+     * FileVisitor to delete filetypes or folders
      */
     private class DeleteFileVisitor extends SimpleFileVisitor<Path> {
         @Override

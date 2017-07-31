@@ -1,7 +1,5 @@
 package com.jmeplay.core.gui;
 
-import com.jmeplay.core.EditorComponent;
-import com.jmeplay.core.Position;
 import com.jmeplay.core.utils.Settings;
 import javafx.scene.Group;
 import javafx.scene.Node;

@@ -1,7 +1,7 @@
 package com.jmeplay.plugin.assets.gui;
 
-import com.jmeplay.core.EditorComponent;
-import com.jmeplay.core.Position;
+import com.jmeplay.core.gui.EditorComponent;
+import com.jmeplay.core.gui.Position;
 import com.jmeplay.core.handler.FileHandler;
 import com.jmeplay.core.utils.ImageLoader;
 import com.jmeplay.plugin.assets.Resources;

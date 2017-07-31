@@ -1,7 +1,5 @@
 package com.jmeplay.core.gui;
 
-import com.jmeplay.core.Position;
-
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 

@@ -19,6 +19,8 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.Collections.singletonList;
+
 /**
  * Handler to open file in external editor
  * Support for mac, win, linux operating systems
@@ -38,8 +40,8 @@ public class OpenExternalFileHandler extends FileHandler<TreeView<Path>> {
      * {@link FileHandler:filetype}
      */
     @Override
-    public String filetype() {
-        return FileHandler.file;
+    public List<String> filetypes() {
+        return singletonList(FileHandler.file);
     }
 
 

@@ -19,10 +19,7 @@ import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 import static java.util.Collections.singletonList;
 
@@ -40,8 +37,8 @@ public class CopyFileHandler extends FileHandler<TreeView<Path>> {
     private JMEPlayConsole jmePlayConsole;
 
     @Override
-    public String filetype() {
-        return FileHandler.any;
+    public List<String> filetypes() {
+        return singletonList(FileHandler.any);
     }
 
     @Override
@@ -61,7 +58,7 @@ public class CopyFileHandler extends FileHandler<TreeView<Path>> {
 
     @Override
     public void handle(Path path, TreeView<Path> source) {
-        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Copy" + path + " to clipboard");
+        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Copy " + path + " to clipboard");
 
         ClipboardContent content = new ClipboardContent();
         content.putFiles(singletonList(path.toFile()));

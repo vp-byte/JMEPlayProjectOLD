@@ -3,6 +3,7 @@ package com.jmeplay.core.gui;
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
@@ -16,7 +17,7 @@ import javax.annotation.PostConstruct;
  * @author vp-byte (Vladimir Petrenko)
  */
 @Component
-public class EditorBuilderCenterCenter {
+public class EditorBuilderCenterCenter implements EditorCenter {
 
     private TabPane centerTabPane;
     private Node centerNode;
@@ -45,6 +46,11 @@ public class EditorBuilderCenterCenter {
 
         initTopSplitPane();
         initSplitPane();
+    }
+
+    @Override
+    public TabPane centerView() {
+        return centerTabPane;
     }
 
     /**
@@ -185,5 +191,4 @@ public class EditorBuilderCenterCenter {
         bottomNode = node;
         bottomRemoved = false;
     }
-
 }

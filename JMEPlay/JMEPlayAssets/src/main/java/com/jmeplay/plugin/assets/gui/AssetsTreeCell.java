@@ -76,14 +76,16 @@ public class AssetsTreeCell extends TextFieldTreeCell<Path> {
     private List<FileHandler<TreeView<Path>>> filterFileHandler(List<FileHandler<TreeView<Path>>> fileHandlers) {
         String fileExtension = PathResolver.resolveExtension(getItem());
         return fileHandlers.stream().filter(fileHandler -> {
-            if (fileExtension != null && fileExtension.equals(fileHandler.filetype())) {
-                return true;
-            }
-            if (fileHandler.filetype().equals(FileHandler.any)) {
-                return true;
-            }
-            if (getItem() != null && !Files.isDirectory(getItem()) && fileHandler.filetype().equals(FileHandler.file)) {
-                return true;
+            for (String filetype : fileHandler.filetypes()) {
+                if (fileExtension != null && fileExtension.equals(filetype)) {
+                    return true;
+                }
+                if (filetype.equals(FileHandler.any)) {
+                    return true;
+                }
+                if (getItem() != null && !Files.isDirectory(getItem()) && filetype.equals(FileHandler.file)) {
+                    return true;
+                }
             }
             return false;
         }).collect(Collectors.toList());

@@ -11,6 +11,9 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.nio.file.Path;
+import java.util.List;
+
+import static java.util.Collections.singletonList;
 
 /**
  * Handler to copy file
@@ -26,8 +29,8 @@ public class OpenTextFileHandler extends FileHandler<TreeView<Path>> {
     private JMEPlayConsole jmePlayConsole;
 
     @Override
-    public String filetype() {
-        return FileHandler.file;
+    public List<String> filetypes() {
+        return singletonList(FileHandler.file);
     }
 
     @Override

@@ -9,6 +9,9 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.nio.file.Path;
+import java.util.List;
+
+import static java.util.Collections.singletonList;
 
 /**
  * Handler to paste file
@@ -21,8 +24,8 @@ public class RenameFileHandler extends FileHandler<TreeView<Path>> {
     private int size = 24;
 
     @Override
-    public String filetype() {
-        return FileHandler.any;
+    public List<String> filetypes() {
+        return singletonList(FileHandler.any);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.jmeplay.core;
+package com.jmeplay.core.gui;
 
 import javafx.scene.Node;
 import javafx.scene.control.Label;

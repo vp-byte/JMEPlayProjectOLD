@@ -1,8 +1,8 @@
 package com.jmeplay.plugin.console;
 
-import com.jmeplay.core.EditorComponent;
+import com.jmeplay.core.gui.EditorComponent;
 import com.jmeplay.core.JMEPlayConsole;
-import com.jmeplay.core.Position;
+import com.jmeplay.core.gui.Position;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;

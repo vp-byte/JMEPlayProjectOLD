@@ -4,8 +4,8 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Component;
 
-import com.jmeplay.core.EditorComponent;
-import com.jmeplay.core.Position;
+import com.jmeplay.core.gui.EditorComponent;
+import com.jmeplay.core.gui.Position;
 
 import javafx.scene.Node;
 import javafx.scene.control.Label;

@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static java.util.Collections.singletonList;
+
 /**
  * Handler to paste file
  *
@@ -30,8 +32,8 @@ public class PasteFileHandler extends FileHandler<TreeView<Path>> {
     private int size = 24;
 
     @Override
-    public String filetype() {
-        return FileHandler.any;
+    public List<String> filetypes() {
+        return singletonList(FileHandler.any);
     }
 
     @Override

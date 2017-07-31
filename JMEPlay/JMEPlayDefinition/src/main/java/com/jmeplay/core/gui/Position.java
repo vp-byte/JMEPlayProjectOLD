@@ -1,4 +1,4 @@
-package com.jmeplay.core;
+package com.jmeplay.core.gui;
 
 /**
  * Enumeration to define position for the view component

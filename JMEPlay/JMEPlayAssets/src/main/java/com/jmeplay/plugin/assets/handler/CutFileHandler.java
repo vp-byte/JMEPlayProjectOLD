@@ -13,6 +13,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.nio.file.Path;
+import java.util.List;
 
 import static java.util.Collections.singletonList;
 
@@ -30,8 +31,8 @@ public class CutFileHandler extends FileHandler<TreeView<Path>> {
     private JMEPlayConsole jmePlayConsole;
 
     @Override
-    public String filetype() {
-        return FileHandler.any;
+    public List<String> filetypes() {
+        return singletonList(FileHandler.any);
     }
 
     @Override
@@ -51,7 +52,7 @@ public class CutFileHandler extends FileHandler<TreeView<Path>> {
 
     @Override
     public void handle(Path path, TreeView<Path> source) {
-        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Cut" + path + " to clipboard");
+        jmePlayConsole.writeMessage(JMEPlayConsole.MessageType.SUCCESS, "Cut " + path + " to clipboard");
 
         ClipboardContent content = new ClipboardContent();
         content.putFiles(singletonList(path.toFile()));

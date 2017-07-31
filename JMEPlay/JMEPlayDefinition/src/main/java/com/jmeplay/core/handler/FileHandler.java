@@ -3,9 +3,10 @@ package com.jmeplay.core.handler;
 import javafx.scene.image.ImageView;
 
 import java.nio.file.Path;
+import java.util.List;
 
 /**
- * Interface to handle files and folders
+ * Interface to handle filetypes and folders
  * any - for any type and folders
  * file - for any filetype only
  * folder - for any folder
@@ -25,9 +26,9 @@ public abstract class FileHandler<T> {
      * Use folder - for any folder
      * Use file extension - for specific file(txt for text file)
      *
-     * @return type of file extension
+     * @return type of filetypes extension
      */
-    public abstract String filetype();
+    public abstract List<String> filetypes();
 
     /**
      * String value to represent handler in the GUI
