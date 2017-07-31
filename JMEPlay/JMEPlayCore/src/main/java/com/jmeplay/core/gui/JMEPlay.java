@@ -1,6 +1,8 @@
 package com.jmeplay.core.gui;
 
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -39,6 +41,9 @@ public class JMEPlay extends Application {
 
     @Autowired
     private EditorBuilder editorBuilder;
+
+    @Autowired
+    private EditorBuilderCenterCenter editorBuilderCenterCenter;
 
     /**
      * Main point to start whole Application
@@ -80,6 +85,9 @@ public class JMEPlay extends Application {
         stage.setMaximized(true);
         editorBuilder.initEditor();
         stage.show();
+
+        stage.widthProperty().addListener((observable, oldValue, newValue) -> editorBuilderCenterCenter.resetDividerPositions());
+        stage.heightProperty().addListener((observable, oldValue, newValue) -> editorBuilderCenterCenter.resetDividerPositions());
         //new Thread(() -> Platform.runLater(() -> showSplashscreen())).start();
     }
 
