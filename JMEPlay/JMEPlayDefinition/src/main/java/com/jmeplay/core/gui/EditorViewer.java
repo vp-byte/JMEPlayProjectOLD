@@ -15,9 +15,7 @@ public abstract class EditorViewer {
 
     public abstract List<String> filetypes();
 
-    public EditorViewerTab view(final Path path) {
-        return new EditorViewerTab(path);
-    }
+    public abstract EditorViewerTab view(final Path path);
 
     public class EditorViewerTab extends Tab {
         private final Path path;
@@ -27,14 +25,10 @@ public abstract class EditorViewer {
             this.setText(getTitle());
         }
 
-        public EditorViewerTab(String text, final Path path) {
-            super(text);
+        public EditorViewerTab(final Path path, Node content) {
             this.path = path;
-        }
-
-        public EditorViewerTab(String text, Node content, final Path path) {
-            super(text, content);
-            this.path = path;
+            this.setText(getTitle());
+            this.setContent(content);
         }
 
         public String getTitle() {
@@ -44,6 +38,8 @@ public abstract class EditorViewer {
         public Path path() {
             return path;
         }
+
+
     }
 
 }
