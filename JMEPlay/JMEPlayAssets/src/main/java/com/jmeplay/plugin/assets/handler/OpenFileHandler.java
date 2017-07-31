@@ -61,7 +61,6 @@ public class OpenFileHandler extends FileHandler<TreeView<Path>> {
 
     @Override
     public void handle(Path path, TreeView<Path> source) {
-        System.err.println(path);
         EditorViewerTab tabToSelect = tabExists(path);
         if (tabToSelect != null) {
             editorCenter.centerView().getSelectionModel().select(tabToSelect);

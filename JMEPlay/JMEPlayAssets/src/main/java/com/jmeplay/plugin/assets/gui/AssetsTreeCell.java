@@ -2,6 +2,7 @@ package com.jmeplay.plugin.assets.gui;
 
 import com.jmeplay.core.handler.FileHandler;
 import com.jmeplay.core.utils.PathResolver;
+import com.jmeplay.plugin.assets.handler.OpenFileHandler;
 import javafx.geometry.Side;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
@@ -12,7 +13,9 @@ import javafx.scene.input.MouseEvent;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -45,13 +48,22 @@ public class AssetsTreeCell extends TextFieldTreeCell<Path> {
     private void processClick(final MouseEvent event) {
         if (getItem() == null) return;
 
+        if (contextMenu != null && contextMenu.isShowing()) {
+            contextMenu.hide();
+        }
+
         final MouseButton button = event.getButton();
-        if (button == MouseButton.SECONDARY) {
 
-            if (contextMenu != null && contextMenu.isShowing()) {
-                contextMenu.hide();
+        if (button.equals(MouseButton.PRIMARY)) {
+            if (event.getClickCount() == 2) {
+                Optional<FileHandler<TreeView<Path>>> openFileHandler = filterFileHandler(fileHandlers).stream().filter(fileHandler -> fileHandler instanceof OpenFileHandler).findFirst();
+                if (openFileHandler.isPresent()) {
+                    openFileHandler.get().handle(getItem(), this.getTreeView());
+                }
             }
+        }
 
+        if (button == MouseButton.SECONDARY) {
             contextMenu = updateContextMenu();
             if (contextMenu == null) return;
             if (!contextMenu.isShowing()) {
