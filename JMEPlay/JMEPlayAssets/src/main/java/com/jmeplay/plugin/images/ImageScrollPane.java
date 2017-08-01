@@ -1,4 +1,4 @@
-package com.jmeplay.plugin.assets.viewer;
+package com.jmeplay.plugin.images;
 
 import com.sun.javafx.scene.control.skin.ScrollPaneSkin;
 import javafx.beans.Observable;
@@ -16,13 +16,15 @@ import java.nio.file.Path;
 public class ImageScrollPane extends ScrollPane {
     private DoubleProperty zoomPropertyWidth;
     private DoubleProperty zoomPropertyHight;
-    private ImageView imageView = new ImageView();
+    private ImageView imageView;
 
     public ImageScrollPane(Path path) {
         Image image = new Image("file:" + path.toAbsolutePath().toString());
         zoomPropertyWidth = new SimpleDoubleProperty(image.getWidth());
         zoomPropertyHight = new SimpleDoubleProperty(image.getHeight());
+        imageView = new ImageView();
         imageView.setImage(image);
+        imageView.setPreserveRatio(true);
 
         zoomPropertyWidth.addListener((Observable listener) -> {
             zoom();

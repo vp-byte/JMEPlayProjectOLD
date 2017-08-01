@@ -1,4 +1,4 @@
-package com.jmeplay.plugin.assets.viewer;
+package com.jmeplay.plugin.images;
 
 import com.jmeplay.core.gui.EditorViewer;
 import org.springframework.stereotype.Component;
@@ -22,6 +22,8 @@ public class ImageViewer extends EditorViewer {
     public EditorViewerTab view(final Path path) {
         ImageScrollPane imageScrollPane = new ImageScrollPane(path);
         EditorViewerTab tab = new EditorViewerTab(path, imageScrollPane);
+        //tab.setGraphic();
+
         return tab;
     }
 }

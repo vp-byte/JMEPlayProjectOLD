@@ -72,7 +72,7 @@ public class EditorBuilderCenterCenter implements EditorCenter {
     }
 
     /**
-     * // FIXME cannot proper set the position of divider in SplitPane
+     * // FIXME set the position of divider with always save for SplitPanes
      * Reset positions of dividers
      */
     public void resetDividerPositions() {

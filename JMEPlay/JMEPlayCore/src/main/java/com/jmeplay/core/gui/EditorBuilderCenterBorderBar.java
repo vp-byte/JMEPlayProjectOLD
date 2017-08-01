@@ -179,6 +179,7 @@ public class EditorBuilderCenterBorderBar {
         } else {
             handleBorderItemBottom(source);
         }
+        editorBuilderCenterCenter.resetDividerPositions();
     }
 
     /**
