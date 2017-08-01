@@ -14,21 +14,29 @@ import java.lang.reflect.Field;
 import java.nio.file.Path;
 
 public class ImageScrollPane extends ScrollPane {
-    private DoubleProperty zoomProperty = new SimpleDoubleProperty(100);
+    private DoubleProperty zoomPropertyWidth;
+    private DoubleProperty zoomPropertyHight;
     private ImageView imageView = new ImageView();
 
     public ImageScrollPane(Path path) {
-        zoomProperty.addListener((Observable listener) -> {
+        Image image = new Image("file:" + path.toAbsolutePath().toString());
+        zoomPropertyWidth = new SimpleDoubleProperty(image.getWidth());
+        zoomPropertyHight = new SimpleDoubleProperty(image.getHeight());
+        imageView.setImage(image);
+
+        zoomPropertyWidth.addListener((Observable listener) -> {
             zoom();
             if (!isHScrollBarVisible()) {
-                imageView.setTranslateX(widthProperty().doubleValue() / 2 - imageView.fitWidthProperty().doubleValue() / 3);
+                imageView.setTranslateX(widthProperty().doubleValue() / 2 - imageView.fitWidthProperty().doubleValue() / 2);
             } else {
                 imageView.setTranslateX(0);
                 setHvalue(0.5);
             }
-
+        });
+        zoomPropertyHight.addListener((Observable listener) -> {
+            zoom();
             if (!isVScrollBarVisible()) {
-                imageView.setTranslateY(heightProperty().doubleValue() / 2 - imageView.fitHeightProperty().doubleValue() / 3);
+                imageView.setTranslateY(heightProperty().doubleValue() / 2 - imageView.fitHeightProperty().doubleValue() / 2);
             } else {
                 imageView.setTranslateY(0);
                 setVvalue(0.5);
@@ -37,14 +45,14 @@ public class ImageScrollPane extends ScrollPane {
 
         addEventFilter(ScrollEvent.ANY, event -> {
             if (event.getDeltaY() > 0) {
-                zoomProperty.set(zoomProperty.get() * 1.1);
+                zoomPropertyWidth.set(zoomPropertyWidth.get() * 1.1);
+                zoomPropertyHight.set(zoomPropertyHight.get() * 1.1);
             } else if (event.getDeltaY() < 0) {
-                zoomProperty.set(zoomProperty.get() / 1.1);
+                zoomPropertyWidth.set(zoomPropertyWidth.get() / 1.1);
+                zoomPropertyHight.set(zoomPropertyHight.get() / 1.1);
             }
         });
 
-        imageView.setImage(new Image("file:" + path.toAbsolutePath().toString()));
-        imageView.preserveRatioProperty().set(true);
         setContent(imageView);
     }
 
@@ -69,7 +77,7 @@ public class ImageScrollPane extends ScrollPane {
     }
 
     public void zoom() {
-        imageView.setFitWidth(zoomProperty.get() * 2);
-        imageView.setFitHeight(zoomProperty.get() * 2);
+        imageView.setFitWidth(zoomPropertyWidth.get());
+        imageView.setFitHeight(zoomPropertyHight.get());
     }
 }
