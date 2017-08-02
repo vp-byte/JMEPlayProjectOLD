@@ -1,8 +1,9 @@
 package com.jmeplay.plugin.console;
 
-import com.jmeplay.core.gui.EditorComponent;
 import com.jmeplay.core.JMEPlayConsole;
+import com.jmeplay.core.gui.EditorComponent;
 import com.jmeplay.core.gui.Position;
+import com.jmeplay.core.utils.Settings;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -22,35 +23,60 @@ import java.io.StringWriter;
  */
 @Component
 public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayConsole {
-    private final String uniqueId = "81e5ad3a-7e83-4b90-b744-90161d7412bd";
-    private final String name = "Console";
-    private final String description = "Component to magage console output";
-    private boolean writeException = false;
+    private boolean writeException;
     private StringBuilder stringBuilder = new StringBuilder();
     private Label label;
     private StackPane stackPane;
     private BorderPane borderPane;
 
-    @Autowired
+    // Injected
+    private Settings settings;
     private JMEPlayConsoleArea jmePlayConsoleArea;
+    private JMEPlayConsoleToolBar jmePlayConsoleToolBar;
 
     @Autowired
-    private JMEPlayConsoleToolBar jmePlayConsoleToolBar;
+    public void setSettings(Settings settings) {
+        this.settings = settings;
+    }
+
+    @Autowired
+    public void setJmePlayConsoleArea(JMEPlayConsoleArea jmePlayConsoleArea) {
+        this.jmePlayConsoleArea = jmePlayConsoleArea;
+    }
+
+    @Autowired
+    public void setJmePlayConsoleToolBar(JMEPlayConsoleToolBar jmePlayConsoleToolBar) {
+        this.jmePlayConsoleToolBar = jmePlayConsoleToolBar;
+    }
 
     /**
      * Initialize JMEPlayConsole
      */
     @PostConstruct
     private void init() {
+        initSettings();
         setPosition(Position.BOTTOM);
         label = new Label("Console");
 
-        stackPane = new StackPane(new VirtualizedScrollPane<>(jmePlayConsoleArea));
-        stackPane.getStylesheets().add(getClass().getResource(Resources.cssConsole).toExternalForm());
-
+        initStackPane();
         borderPane = new BorderPane();
         borderPane.setLeft(jmePlayConsoleToolBar);
         borderPane.setCenter(stackPane);
+    }
+
+    /**
+     * Initialize stack pane
+     */
+    private void initStackPane() {
+        stackPane = new StackPane(new VirtualizedScrollPane<>(jmePlayConsoleArea));
+        stackPane.getStylesheets().add(getClass().getResource(Resources.cssConsole).toExternalForm());
+    }
+
+    /**
+     * Initialize settings for console tool bar
+     */
+    private void initSettings() {
+        writeException = settings.getOptionAsBoolean(Resources.consoleWriteExceptions, Resources.consoleDefaultWriteExceptions);
     }
 
     /**
@@ -58,7 +84,7 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
      */
     @Override
     public String uniqueId() {
-        return uniqueId;
+        return "81e5ad3a-7e83-4b90-b744-90161d7412bd";
     }
 
     /**
@@ -66,7 +92,7 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
      */
     @Override
     public String name() {
-        return name;
+        return "Console";
     }
 
     /**
@@ -74,7 +100,7 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
      */
     @Override
     public String description() {
-        return description;
+        return "Component to magage console output";
     }
 
     /**
@@ -117,7 +143,7 @@ public class JMEPlayConsoleComponent extends EditorComponent implements JMEPlayC
     /**
      * Clear text buffer
      */
-    public void clear() {
+    void clear() {
         stringBuilder = new StringBuilder();
     }
 

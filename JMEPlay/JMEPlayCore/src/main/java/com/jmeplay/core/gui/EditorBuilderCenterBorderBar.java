@@ -101,7 +101,7 @@ public class EditorBuilderCenterBorderBar {
     private Node initBorderItem(EditorComponent component, boolean selected) {
         Label label = component.label();
         Position position = component.getPosition();
-        label.setMinHeight(settings.getOptionInteger("guiIconSize") - 2);
+        label.setMinHeight(settings.getOptionInteger("guiIconSize", 32) - 2);
         label.getStyleClass().remove("borderbar-label");
         label.getStyleClass().add("borderbar-label");
         if (position == Position.LEFT) {
@@ -123,7 +123,7 @@ public class EditorBuilderCenterBorderBar {
     private void initLeft() {
         left = new VBox();
         left.getChildren().addAll(borderItemsLeft);
-        borderBarLeft = new BorderBar(settings.getOptionInteger("guiIconSize"), Position.LEFT, left);
+        borderBarLeft = new BorderBar(settings.getOptionInteger("guiIconSize", 32), Position.LEFT, left);
         left.prefHeightProperty().bind(borderBarLeft.heightProperty());
     }
 
@@ -133,7 +133,7 @@ public class EditorBuilderCenterBorderBar {
     private void initRight() {
         right = new VBox();
         right.getChildren().addAll(borderItemsRight);
-        borderBarRight = new BorderBar(settings.getOptionInteger("guiIconSize"), Position.RIGHT, right);
+        borderBarRight = new BorderBar(settings.getOptionInteger("guiIconSize", 32), Position.RIGHT, right);
         right.prefHeightProperty().bind(borderBarRight.heightProperty());
     }
 
@@ -144,11 +144,11 @@ public class EditorBuilderCenterBorderBar {
         bottom = new HBox();
         bottom.getStyleClass().add("borderbar");
         Label labelMargin = new Label();
-        labelMargin.setMinWidth(settings.getOptionInteger("guiIconSize"));
+        labelMargin.setMinWidth(settings.getOptionInteger("guiIconSize", 32));
         bottom.getChildren().add(labelMargin);
 
         bottom.getChildren().addAll(borderItemsBottom);
-        borderBarBottom = new BorderBar(settings.getOptionInteger("guiIconSize"), Position.BOTTOM, bottom);
+        borderBarBottom = new BorderBar(settings.getOptionInteger("guiIconSize", 32), Position.BOTTOM, bottom);
         bottom.prefHeightProperty().bind(borderBarBottom.heightProperty());
     }
 

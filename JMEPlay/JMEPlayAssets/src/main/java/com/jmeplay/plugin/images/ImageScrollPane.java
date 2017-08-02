@@ -8,6 +8,7 @@ import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
 
 import java.lang.reflect.Field;
@@ -15,47 +16,61 @@ import java.nio.file.Path;
 
 public class ImageScrollPane extends ScrollPane {
     private DoubleProperty zoomPropertyWidth;
-    private DoubleProperty zoomPropertyHight;
+    private DoubleProperty zoomPropertyHeight;
     private ImageView imageView;
 
     public ImageScrollPane(Path path) {
         Image image = new Image("file:" + path.toAbsolutePath().toString());
         zoomPropertyWidth = new SimpleDoubleProperty(image.getWidth());
-        zoomPropertyHight = new SimpleDoubleProperty(image.getHeight());
+        zoomPropertyHeight = new SimpleDoubleProperty(image.getHeight());
         imageView = new ImageView();
         imageView.setImage(image);
         imageView.setPreserveRatio(true);
 
         zoomPropertyWidth.addListener((Observable listener) -> {
             zoom();
-            if (!isHScrollBarVisible()) {
-                imageView.setTranslateX(widthProperty().doubleValue() / 2 - imageView.fitWidthProperty().doubleValue() / 2);
-            } else {
-                imageView.setTranslateX(0);
-                setHvalue(0.5);
-            }
+            centerHorizontal();
         });
-        zoomPropertyHight.addListener((Observable listener) -> {
+        zoomPropertyHeight.addListener((Observable listener) -> {
             zoom();
-            if (!isVScrollBarVisible()) {
-                imageView.setTranslateY(heightProperty().doubleValue() / 2 - imageView.fitHeightProperty().doubleValue() / 2);
-            } else {
-                imageView.setTranslateY(0);
-                setVvalue(0.5);
+            centerVertical();
+        });
+
+        addEventFilter(ScrollEvent.ANY, scrollEvent -> {
+            if (scrollEvent.getDeltaY() > 0) {
+                zoomPropertyWidth.set(zoomPropertyWidth.get() * 1.1);
+                zoomPropertyHeight.set(zoomPropertyHeight.get() * 1.1);
+            } else if (scrollEvent.getDeltaY() < 0) {
+                zoomPropertyWidth.set(zoomPropertyWidth.get() / 1.1);
+                zoomPropertyHeight.set(zoomPropertyHeight.get() / 1.1);
             }
         });
 
-        addEventFilter(ScrollEvent.ANY, event -> {
-            if (event.getDeltaY() > 0) {
-                zoomPropertyWidth.set(zoomPropertyWidth.get() * 1.1);
-                zoomPropertyHight.set(zoomPropertyHight.get() * 1.1);
-            } else if (event.getDeltaY() < 0) {
-                zoomPropertyWidth.set(zoomPropertyWidth.get() / 1.1);
-                zoomPropertyHight.set(zoomPropertyHight.get() / 1.1);
+        setOnMouseMoved(mouseEvent -> {
+            if (mouseEvent.getEventType() == MouseEvent.MOUSE_MOVED) {
+                System.out.println(mouseEvent.getX() + "," + mouseEvent.getY());
             }
         });
 
         setContent(imageView);
+    }
+
+    private void centerVertical() {
+        if (!isVScrollBarVisible()) {
+            imageView.setTranslateY(heightProperty().doubleValue() / 2 - imageView.fitHeightProperty().doubleValue() / 2);
+        } else {
+            imageView.setTranslateY(0);
+            setVvalue(0.5);
+        }
+    }
+
+    private void centerHorizontal() {
+        if (!isHScrollBarVisible()) {
+            imageView.setTranslateX(widthProperty().doubleValue() / 2 - imageView.fitWidthProperty().doubleValue() / 2);
+        } else {
+            imageView.setTranslateX(0);
+            setHvalue(0.5);
+        }
     }
 
     private boolean isHScrollBarVisible() {
@@ -78,8 +93,13 @@ public class ImageScrollPane extends ScrollPane {
         }
     }
 
-    public void zoom() {
+    private void zoom() {
         imageView.setFitWidth(zoomPropertyWidth.get());
-        imageView.setFitHeight(zoomPropertyHight.get());
+        imageView.setFitHeight(zoomPropertyHeight.get());
+    }
+
+    public void center() {
+        centerVertical();
+        centerHorizontal();
     }
 }

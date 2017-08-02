@@ -2,6 +2,10 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment>Settings for whole application</comment>
+<entry key="consoleToolsSpacing">5</entry>
+<entry key="consoleToolsIconSize">24</entry>
 <entry key="guiIconSize">32</entry>
 <entry key="guiBorderBarSize">32</entry>
+<entry key="toolBarIconSize">32</entry>
+<entry key="consoleWriteExceptions">false</entry>
 </properties>

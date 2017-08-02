@@ -1,6 +1,7 @@
 package com.jmeplay.plugin.console;
 
 import com.jmeplay.core.utils.ImageLoader;
+import com.jmeplay.core.utils.Settings;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseButton;
@@ -17,47 +18,64 @@ import javax.annotation.PostConstruct;
  * @author vp-byte (Vladimir Petrenko)
  */
 @Component
+@SuppressWarnings("FieldCanBeLocal")
 public class JMEPlayConsoleToolBar extends VBox {
-    private int size = 24;
+    private int toolsSpacing;
+    private int toolsIconSize;
     private Button buttonClose;
     private Button buttonCopy;
     private Button buttonSelectAll;
     private Button buttonClear;
 
-    @Autowired
+    // Injected
+    private Settings settings;
     private JMEPlayConsoleArea jmePlayConsoleArea;
+    private JMEPlayConsoleComponent jmePlayConsoleComponent;
 
     @Autowired
-    private JMEPlayConsoleComponent jmePlayConsoleComponent;
+    public void setSettings(Settings settings) {
+        this.settings = settings;
+    }
+
+    @Autowired
+    public void setJmePlayConsoleArea(JMEPlayConsoleArea jmePlayConsoleArea) {
+        this.jmePlayConsoleArea = jmePlayConsoleArea;
+    }
+
+    @Autowired
+    public void setJmePlayConsoleComponent(JMEPlayConsoleComponent jmePlayConsoleComponent) {
+        this.jmePlayConsoleComponent = jmePlayConsoleComponent;
+    }
 
     /**
      * Initialize JMEPlayConsole
      */
     @PostConstruct
     private void init() {
-        setSpacing(5);
+        initSettings();
+        setSpacing(toolsSpacing);
         initButtonClose();
         initButtonCopy();
         initButtonClear();
         initButtonSelectAll();
 
-        jmePlayConsoleArea.setOnMouseReleased(this::mouseEventUpdateButtons);
+        jmePlayConsoleArea.setOnMouseReleased(event -> updateButtons());
     }
 
     /**
-     * Update buttons on tool bar
-     *
-     * @param event from mouse
+     * Initialize settings for console tool bar
      */
-    private void mouseEventUpdateButtons(MouseEvent event) {
-        updateButtons();
+    private void initSettings() {
+        toolsSpacing = settings.getOptionInteger(Resources.consoleToolsSpacing, Resources.consoleDefaultToolsSpacing);
+        toolsIconSize = settings.getOptionInteger(Resources.consoleToolsIconSize, Resources.consoleDefaultToolsIconSize);
+        System.out.println(toolsIconSize);
     }
 
     /**
      * Initialize close button
      */
     private void initButtonClose() {
-        buttonClose = new Button(null, ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleClose, size, size));
+        buttonClose = new Button(null, ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleClose, toolsIconSize, toolsIconSize));
         buttonClose.setTooltip(new Tooltip("Close console view"));
         buttonClose.setOnAction(event -> {
             MouseEvent mouseEvent = new MouseEvent(MouseEvent.MOUSE_CLICKED,
@@ -72,7 +90,7 @@ public class JMEPlayConsoleToolBar extends VBox {
      * Initialize copy button
      */
     private void initButtonCopy() {
-        buttonCopy = new Button(null, ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleCopy, size, size));
+        buttonCopy = new Button(null, ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleCopy, toolsIconSize, toolsIconSize));
         buttonCopy.setTooltip(new Tooltip("Copy selected text"));
         buttonCopy.setDisable(true);
         buttonCopy.setOnAction(event -> {
@@ -86,7 +104,7 @@ public class JMEPlayConsoleToolBar extends VBox {
      * Initialize select all button
      */
     private void initButtonSelectAll() {
-        buttonSelectAll = new Button(null, ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleSelectAll, size, size));
+        buttonSelectAll = new Button(null, ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleSelectAll, toolsIconSize, toolsIconSize));
         buttonSelectAll.setTooltip(new Tooltip("Select whole text"));
         buttonSelectAll.setDisable(true);
         buttonSelectAll.setOnAction(event -> {
@@ -101,7 +119,7 @@ public class JMEPlayConsoleToolBar extends VBox {
      * Initialize clear button
      */
     private void initButtonClear() {
-        buttonClear = new Button(null, ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleDelete, size, size));
+        buttonClear = new Button(null, ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleDelete, toolsIconSize, toolsIconSize));
         buttonClear.setTooltip(new Tooltip("Clear whole text"));
         buttonClear.setDisable(true);
         buttonClear.setOnAction(event -> {
@@ -115,7 +133,7 @@ public class JMEPlayConsoleToolBar extends VBox {
     /**
      * Update view of buttons
      */
-    public void updateButtons() {
+    void updateButtons() {
         boolean containsText = jmePlayConsoleArea.getText() != null && !jmePlayConsoleArea.getText().isEmpty();
         buttonSelectAll.setDisable(!containsText);
         buttonClear.setDisable(!containsText);

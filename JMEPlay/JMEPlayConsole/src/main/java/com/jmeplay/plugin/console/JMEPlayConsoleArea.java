@@ -1,7 +1,7 @@
 package com.jmeplay.plugin.console;
 
-import com.jmeplay.core.JMEPlayConsole;
 import com.jmeplay.core.utils.ImageLoader;
+import com.jmeplay.core.utils.Settings;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
  */
 @Component
 public class JMEPlayConsoleArea extends CodeArea {
-    private int size = 24;
+    private int toolsIconSize;
     private ContextMenu codeAreaMenu;
 
     private final String ERROR_PATTERN = "\\[(ERROR)\\]\\s";
@@ -43,16 +43,35 @@ public class JMEPlayConsoleArea extends CodeArea {
 
     private final Pattern COMPILED_PATTERN = Pattern.compile(String.join("|", PATTERNS));
 
-    @Autowired
+    // Injected
+    private Settings settings;
     private JMEPlayConsoleToolBar jmePlayConsoleToolBar;
+
+    @Autowired
+    public void setSettings(Settings settings) {
+        this.settings = settings;
+    }
+
+    @Autowired
+    public void setJmePlayConsoleToolBar(JMEPlayConsoleToolBar jmePlayConsoleToolBar) {
+        this.jmePlayConsoleToolBar = jmePlayConsoleToolBar;
+    }
 
     /**
      * Initialize JMEPlayConsoleArea
      */
     @PostConstruct
     private void init() {
+        initSettings();
         this.setEditable(false);
         this.setOnMouseClicked(this::processClick);
+    }
+
+    /**
+     * Initialize settings for console tool bar
+     */
+    private void initSettings() {
+        toolsIconSize = settings.getOptionInteger(Resources.consoleToolsIconSize, Resources.consoleDefaultToolsIconSize);
     }
 
     /**
@@ -67,15 +86,15 @@ public class JMEPlayConsoleArea extends CodeArea {
         final MouseButton button = event.getButton();
         if (button == MouseButton.SECONDARY) {
             codeAreaMenu = new ContextMenu();
-            MenuItem codeAreaMenuCopy = new MenuItem("Copy", ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleCopy, size, size));
+            MenuItem codeAreaMenuCopy = new MenuItem("Copy", ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleCopy, toolsIconSize, toolsIconSize));
             codeAreaMenuCopy.setOnAction(eventCopy -> this.copy());
-            MenuItem codeAreaMenuSelectAll = new MenuItem("Select All", ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleSelectAll, size, size));
+            MenuItem codeAreaMenuSelectAll = new MenuItem("Select All", ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleSelectAll, toolsIconSize, toolsIconSize));
             codeAreaMenuSelectAll.setOnAction(eventSelectAll -> {
                 this.selectAll();
                 jmePlayConsoleToolBar.updateButtons();
             });
             SeparatorMenuItem separatorMenuItem = new SeparatorMenuItem();
-            MenuItem codeAreaClearAll = new MenuItem("Clear All", ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleDelete, size, size));
+            MenuItem codeAreaClearAll = new MenuItem("Clear All", ImageLoader.initImageView(this.getClass(), Resources.iconsConsoleDelete, toolsIconSize, toolsIconSize));
             codeAreaClearAll.setOnAction(eventClearAll -> this.clear());
             if (this.getSelectedText() != null && !this.getSelectedText().isEmpty()) {
                 codeAreaMenu.getItems().add(codeAreaMenuCopy);
@@ -92,7 +111,7 @@ public class JMEPlayConsoleArea extends CodeArea {
     /**
      * Write text to code area
      */
-    public void writeText(String message) {
+    void writeText(String message) {
         this.replaceText(message);
         this.setStyleSpans(0, computeHighlighting(this.getText()));
     }

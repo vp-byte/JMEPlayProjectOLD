@@ -20,11 +20,6 @@ public abstract class EditorViewer {
     public class EditorViewerTab extends Tab {
         private final Path path;
 
-        public EditorViewerTab(final Path path) {
-            this.path = path;
-            this.setText(getTitle());
-        }
-
         public EditorViewerTab(final Path path, Node content) {
             this.path = path;
             this.setText(getTitle());
@@ -38,7 +33,6 @@ public abstract class EditorViewer {
         public Path path() {
             return path;
         }
-
 
     }
 

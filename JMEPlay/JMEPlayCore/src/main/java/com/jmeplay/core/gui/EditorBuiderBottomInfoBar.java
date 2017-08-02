@@ -38,7 +38,7 @@ public class EditorBuiderBottomInfoBar implements BottomInfoMessage {
     @PostConstruct
     private void init() {
         visible = true;
-        size = settings.getOptionInteger("guiIconSize");
+        size = settings.getOptionInteger("guiIconSize", 32);
         initModeSwitcher();
         initInfoLabel();
         initBottomBox();

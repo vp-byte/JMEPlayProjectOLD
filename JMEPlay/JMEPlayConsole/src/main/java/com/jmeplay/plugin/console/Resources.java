@@ -11,11 +11,21 @@ public class Resources {
     private final static String iconsBase = baseConsole + "icons/";
 
     // CSS
-    public final static String cssConsole = cssBase + "jmeplay-console.css";
+    final static String cssConsole = cssBase + "jmeplay-console.css";
 
     // ICONS
-    public final static String iconsConsoleClose = iconsBase + "close.svg";
-    public final static String iconsConsoleCopy = iconsBase + "copy.svg";
-    public final static String iconsConsoleDelete = iconsBase + "delete.svg";
-    public final static String iconsConsoleSelectAll = iconsBase + "selectall.svg";
+    final static String iconsConsoleClose = iconsBase + "close.svg";
+    final static String iconsConsoleCopy = iconsBase + "copy.svg";
+    final static String iconsConsoleDelete = iconsBase + "delete.svg";
+    final static String iconsConsoleSelectAll = iconsBase + "selectall.svg";
+
+    // KEYS FOR SETTINGS
+    final static String consoleToolsIconSize = "consoleToolsIconSize";
+    final static String consoleToolsSpacing = "consoleToolsSpacing";
+    final static String consoleWriteExceptions = "consoleWriteExceptions";
+
+    // DEFAULT VALUES
+    final static int consoleDefaultToolsIconSize = 24;
+    final static int consoleDefaultToolsSpacing = 5;
+    final static boolean consoleDefaultWriteExceptions = false;
 }

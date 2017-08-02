@@ -1,6 +1,7 @@
 package com.jmeplay.plugin.images;
 
 import com.jmeplay.core.gui.EditorViewer;
+import com.jmeplay.core.utils.ImageLoader;
 import org.springframework.stereotype.Component;
 
 import java.nio.file.Path;
@@ -12,6 +13,7 @@ import java.util.List;
  */
 @Component
 public class ImageViewer extends EditorViewer {
+    private int size = 16;
 
     @Override
     public List<String> filetypes() {
@@ -22,8 +24,7 @@ public class ImageViewer extends EditorViewer {
     public EditorViewerTab view(final Path path) {
         ImageScrollPane imageScrollPane = new ImageScrollPane(path);
         EditorViewerTab tab = new EditorViewerTab(path, imageScrollPane);
-        //tab.setGraphic();
-
+        tab.setGraphic(ImageLoader.initImageView(this.getClass(), Resources.iconsImagesImage, size, size));
         return tab;
     }
 }
