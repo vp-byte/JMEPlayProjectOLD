@@ -7,12 +7,18 @@ import java.nio.file.Path;
 import java.util.List;
 
 /**
- * Inteface to implement new EditorView
+ * Abstract class to implement varies editor views
  *
  * @author vp-byte (Vladimir Petrenko)
  */
 public abstract class EditorViewer {
 
+    /**
+     * List with supported file types.
+     * Please use file extensions to
+     *
+     * @return
+     */
     public abstract List<String> filetypes();
 
     public abstract EditorViewerTab view(final Path path);
@@ -26,7 +32,7 @@ public abstract class EditorViewer {
             this.setContent(content);
         }
 
-        public String getTitle() {
+        String getTitle() {
             return path.getFileName().toString();
         }
 
