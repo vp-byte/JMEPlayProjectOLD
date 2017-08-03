@@ -3,6 +3,9 @@ package com.jmeplay.plugin.images;
 import com.jmeplay.core.gui.EditorViewer;
 import com.jmeplay.core.utils.ImageLoader;
 import com.jmeplay.core.utils.Settings;
+import javafx.geometry.Pos;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +33,6 @@ public class JMEPlayImageViewerComponent extends EditorViewer {
         this.settings = settings;
     }
 
-
     /**
      * Initialize JMEPlayConsole
      */
@@ -53,13 +55,8 @@ public class JMEPlayImageViewerComponent extends EditorViewer {
 
     @Override
     public EditorViewerTab view(final Path path) {
-        JMEPLayImageScrollPane JMEPLayImageScrollPane = new JMEPLayImageScrollPane(path);
-        VBox layout = new VBox();
-        layout.getChildren().setAll(JMEPLayImageScrollPane);
-
-        VBox.setVgrow(JMEPLayImageScrollPane, Priority.ALWAYS);
-
-        EditorViewerTab tab = new EditorViewerTab(path, layout);
+        JMEPLayImageScrollPane imePLayImageScrollPane = new JMEPLayImageScrollPane(path);
+        EditorViewerTab tab = new EditorViewerTab(path, imePLayImageScrollPane);
         tab.setGraphic(ImageLoader.initImageView(this.getClass(), Resources.iconsImagesImage, tabIconSize, tabIconSize));
         return tab;
     }

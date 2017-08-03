@@ -1,15 +1,18 @@
 package com.jmeplay.plugin.images;
 
+import javafx.beans.Observable;
+import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.geometry.Point2D;
-import javafx.scene.Group;
+import javafx.geometry.Pos;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 
 import java.nio.file.Path;
 
@@ -20,46 +23,48 @@ import java.nio.file.Path;
  */
 @SuppressWarnings("FieldCanBeLocal")
 class JMEPLayImageScrollPane extends ScrollPane {
-    private final double SCALE_DELTA = 1.1;
+    private final double SCROLL_DELTA = 1.1;
+    private ObjectProperty<Point2D> mouseCoordinates = new SimpleObjectProperty<>();
+    private ObjectProperty<Point2D> lastMousePressedCoordinates = new SimpleObjectProperty<>();
 
-    private Path path;
-    private ImageView imageView;
-    private Group group;
-    private StackPane zoomPane;
-    private Group scrollContent;
+    private DoubleProperty zoomPropertyWidth;
+    private DoubleProperty zoomPropertyHight;
+    private JMEPLayImageView imageView;
+    private BorderPane borderPane;
+    private VBox vBox;
 
-    private ObjectProperty<Point2D> lastMouseCoordinates = new SimpleObjectProperty<>();
-
-    JMEPLayImageScrollPane(Path path) {
-        this.path = path;
-        initImageView();
-        initScrollContent();
-        setContent(scrollContent);
-    }
-
-    /**
-     * Initialize image view with image from path
-     */
-    private void initImageView() {
+    public JMEPLayImageScrollPane(Path path) {
         Image image = new Image("file:" + path.toAbsolutePath().toString());
-        imageView = new ImageView();
+        zoomPropertyWidth = new SimpleDoubleProperty(image.getWidth());
+        zoomPropertyHight = new SimpleDoubleProperty(image.getHeight());
+
+        imageView = new JMEPLayImageView();
         imageView.setImage(image);
+        imageView.setPreserveRatio(true);
+
+        borderPane = new BorderPane();
+        borderPane.setCenter(imageView);
+
+        vBox = new VBox(borderPane);
+        vBox.setAlignment(Pos.CENTER);
+        vBox.minWidthProperty().bind(widthProperty());
+        vBox.minHeightProperty().bind(heightProperty());
+
+        setOnMouseMoved(this::processMouseMoved);
+
+        zoomPropertyWidth.addListener((Observable listener) -> borderPane.setPrefWidth(zoomPropertyWidth.get()));
+        zoomPropertyHight.addListener((Observable listener) -> borderPane.setPrefHeight(zoomPropertyHight.get()));
+
+        addEventFilter(ScrollEvent.ANY, this::processScroll);
+        borderPane.setOnMousePressed(this::processMousePressed);
+        borderPane.setOnMouseDragged(this::processMouseDragged);
+
+        setContent(vBox);
     }
 
-    /**
-     * Initialize scroll content
-     */
-    private void initScrollContent() {
-        group = new Group(imageView);
-        zoomPane = new StackPane();
-        zoomPane.getChildren().add(group);
-        scrollContent = new Group(zoomPane);
+    private void processMouseMoved(MouseEvent event) {
+        mouseCoordinates.set(new Point2D(event.getX(), event.getY()));
 
-        viewportBoundsProperty().addListener((observable, oldValue, newValue) -> zoomPane.setMinSize(newValue.getWidth(), newValue.getHeight()));
-
-        zoomPane.setOnScroll(this::processScroll);
-        scrollContent.setOnMousePressed(this::processMousePressed);
-        scrollContent.setOnMouseDragged(this::processMouseDragged);
     }
 
     /**
@@ -68,18 +73,25 @@ class JMEPLayImageScrollPane extends ScrollPane {
      * @param event to scroll
      */
     private void processScroll(ScrollEvent event) {
-        event.consume();
-
-        if (event.getDeltaY() == 0) {
-            return;
+        if (event.getDeltaY() > 0) {
+            zoomPropertyWidth.set(zoomPropertyWidth.get() * SCROLL_DELTA);
+            zoomPropertyHight.set(zoomPropertyHight.get() * SCROLL_DELTA);
+        } else if (event.getDeltaY() < 0) {
+            if (zoomPropertyWidth.get() > imageView.getImage().getWidth() &&
+                    zoomPropertyHight.get() > imageView.getImage().getHeight()) {
+                zoomPropertyWidth.set(zoomPropertyWidth.get() / SCROLL_DELTA);
+                zoomPropertyHight.set(zoomPropertyHight.get() / SCROLL_DELTA);
+            }
         }
+        setHvalue(0.5);
+        setVvalue(0.5);
 
-        Point2D scrollOffset = figureScrollOffset();
+        //double deltaX = 100.0 / zoomPropertyWidth.doubleValue() * mouseCoordinates.get().getX();
+        //setHvalue(deltaX / 100.0);
 
-        double scaleFactor = (event.getDeltaY() > 0) ? SCALE_DELTA : 1 / SCALE_DELTA;
-        group.setScaleX(group.getScaleX() * scaleFactor);
-        group.setScaleY(group.getScaleY() * scaleFactor);
-        repositionScroller(scaleFactor, scrollOffset);
+
+        //double deltaY = 100.0 / zoomPropertyHight.doubleValue() * mouseCoordinates.get().getY();
+        //setVvalue(deltaY / 100.0);
     }
 
     /**
@@ -88,7 +100,7 @@ class JMEPLayImageScrollPane extends ScrollPane {
      * @param event of mouse pressed
      */
     private void processMousePressed(MouseEvent event) {
-        lastMouseCoordinates.set(new Point2D(event.getX(), event.getY()));
+        lastMousePressedCoordinates.set(new Point2D(event.getX(), event.getY()));
     }
 
     /**
@@ -97,58 +109,17 @@ class JMEPLayImageScrollPane extends ScrollPane {
      * @param event of mouse dragged
      */
     private void processMouseDragged(MouseEvent event) {
-        double deltaX = event.getX() - lastMouseCoordinates.get().getX();
-        double extraWidth = scrollContent.getLayoutBounds().getWidth() - getViewportBounds().getWidth();
+        double deltaX = event.getX() - lastMousePressedCoordinates.get().getX();
+        double extraWidth = borderPane.getLayoutBounds().getWidth() - getViewportBounds().getWidth();
         double deltaH = deltaX * (getHmax() - getHmin()) / extraWidth;
         double desiredH = getHvalue() - deltaH;
         setHvalue(Math.max(0, Math.min(getHmax(), desiredH)));
 
-        double deltaY = event.getY() - lastMouseCoordinates.get().getY();
-        double extraHeight = scrollContent.getLayoutBounds().getHeight() - getViewportBounds().getHeight();
+        double deltaY = event.getY() - lastMousePressedCoordinates.get().getY();
+        double extraHeight = borderPane.getLayoutBounds().getHeight() - getViewportBounds().getHeight();
         double deltaV = deltaY * (getHmax() - getHmin()) / extraHeight;
         double desiredV = getVvalue() - deltaV;
         setVvalue(Math.max(0, Math.min(getVmax(), desiredV)));
     }
 
-    /**
-     * Amount of scrolling in each direction in scrollContent coordinate units
-     *
-     * @return scroll offset x and y as {@link Point2D}
-     */
-    private Point2D figureScrollOffset() {
-        double extraWidth = scrollContent.getLayoutBounds().getWidth() - getViewportBounds().getWidth();
-        double hScrollProportion = (getHvalue() - getHmin()) / (getHmax() - getHmin());
-        double scrollXOffset = hScrollProportion * Math.max(0, extraWidth);
-        double extraHeight = scrollContent.getLayoutBounds().getHeight() - getViewportBounds().getHeight();
-        double vScrollProportion = (getVvalue() - getVmin()) / (getVmax() - getVmin());
-        double scrollYOffset = vScrollProportion * Math.max(0, extraHeight);
-        return new Point2D(scrollXOffset, scrollYOffset);
-    }
-
-    /**
-     * Move viewport so that old center remains in the center after thescaling
-     *
-     * @param scaleFactor  factor of scale
-     * @param scrollOffset scroll offset x and y as {@link Point2D}
-     */
-    private void repositionScroller(double scaleFactor, Point2D scrollOffset) {
-        double scrollXOffset = scrollOffset.getX();
-        double scrollYOffset = scrollOffset.getY();
-        double extraWidth = scrollContent.getLayoutBounds().getWidth() - getViewportBounds().getWidth();
-        if (extraWidth > 0) {
-            double halfWidth = getViewportBounds().getWidth() / 2;
-            double newScrollXOffset = (scaleFactor - 1) * halfWidth + scaleFactor * scrollXOffset;
-            setHvalue(getHmin() + newScrollXOffset * (getHmax() - getHmin()) / extraWidth);
-        } else {
-            setHvalue(getHmin());
-        }
-        double extraHeight = scrollContent.getLayoutBounds().getHeight() - getViewportBounds().getHeight();
-        if (extraHeight > 0) {
-            double halfHeight = getViewportBounds().getHeight() / 2;
-            double newScrollYOffset = (scaleFactor - 1) * halfHeight + scaleFactor * scrollYOffset;
-            setVvalue(getVmin() + newScrollYOffset * (getVmax() - getVmin()) / extraHeight);
-        } else {
-            setHvalue(getHmin());
-        }
-    }
 }
