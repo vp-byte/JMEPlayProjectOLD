@@ -35,22 +35,27 @@ class JMEPLayImageScrollPane extends ScrollPane {
 
     public JMEPLayImageScrollPane(Path path) {
         Image image = new Image("file:" + path.toAbsolutePath().toString());
-        zoomPropertyWidth = new SimpleDoubleProperty(image.getWidth());
-        zoomPropertyHight = new SimpleDoubleProperty(image.getHeight());
-
         imageView = new JMEPLayImageView();
         imageView.setImage(image);
         imageView.setPreserveRatio(true);
 
+        zoomPropertyWidth = new SimpleDoubleProperty(imageView.minWidth(image.getWidth()));
+        zoomPropertyHight = new SimpleDoubleProperty(imageView.minHeight(image.getHeight()));
+
+
         borderPane = new BorderPane();
         borderPane.setCenter(imageView);
 
+      /*  VBox ts = new VBox(borderPane);
+        ts.minWidthProperty().bind(borderPane.widthProperty().multiply(2));
+        ts.minHeightProperty().bind(borderPane.heightProperty().multiply(2));
+*/
         vBox = new VBox(borderPane);
         vBox.setAlignment(Pos.CENTER);
         vBox.minWidthProperty().bind(widthProperty());
         vBox.minHeightProperty().bind(heightProperty());
 
-        setOnMouseMoved(this::processMouseMoved);
+        imageView.setOnMouseMoved(this::processMouseMoved);
 
         zoomPropertyWidth.addListener((Observable listener) -> borderPane.setPrefWidth(zoomPropertyWidth.get()));
         zoomPropertyHight.addListener((Observable listener) -> borderPane.setPrefHeight(zoomPropertyHight.get()));
@@ -64,7 +69,6 @@ class JMEPLayImageScrollPane extends ScrollPane {
 
     private void processMouseMoved(MouseEvent event) {
         mouseCoordinates.set(new Point2D(event.getX(), event.getY()));
-
     }
 
     /**
@@ -77,21 +81,27 @@ class JMEPLayImageScrollPane extends ScrollPane {
             zoomPropertyWidth.set(zoomPropertyWidth.get() * SCROLL_DELTA);
             zoomPropertyHight.set(zoomPropertyHight.get() * SCROLL_DELTA);
         } else if (event.getDeltaY() < 0) {
-            if (zoomPropertyWidth.get() > imageView.getImage().getWidth() &&
-                    zoomPropertyHight.get() > imageView.getImage().getHeight()) {
+            if (zoomPropertyWidth.get() > imageView.minWidth(imageView.getImage().getHeight())
+                    && zoomPropertyHight.get() > imageView.minHeight(imageView.getImage().getWidth())) {
                 zoomPropertyWidth.set(zoomPropertyWidth.get() / SCROLL_DELTA);
                 zoomPropertyHight.set(zoomPropertyHight.get() / SCROLL_DELTA);
             }
         }
-        setHvalue(0.5);
+
+        double desHvalue = mouseCoordinates.get().getX() / imageView.getBoundsInParent().getWidth();
+        //double desVvalue = mouseCoordinates.get().getY() / imageView.getBoundsInParent().getHeight();
+
+        double extraWidth = borderPane.getLayoutBounds().getWidth() - getViewportBounds().getWidth();
+        if (extraWidth >= 0.0) {
+            System.out.println(mouseCoordinates.get().getX());
+            System.out.println(imageView.getBoundsInParent().getWidth());
+            System.out.println(desHvalue);
+        }
+
+        layout();
+        setHvalue(desHvalue);
         setVvalue(0.5);
 
-        //double deltaX = 100.0 / zoomPropertyWidth.doubleValue() * mouseCoordinates.get().getX();
-        //setHvalue(deltaX / 100.0);
-
-
-        //double deltaY = 100.0 / zoomPropertyHight.doubleValue() * mouseCoordinates.get().getY();
-        //setVvalue(deltaY / 100.0);
     }
 
     /**

@@ -7,6 +7,6 @@
 <entry key="imageViewTabIconSize">16</entry>
 <entry key="guiIconSize">32</entry>
 <entry key="guiBorderBarSize">32</entry>
-<entry key="toolBarIconSize">32</entry>
 <entry key="consoleWriteExceptions">false</entry>
+<entry key="toolBarIconSize">32</entry>
 </properties>

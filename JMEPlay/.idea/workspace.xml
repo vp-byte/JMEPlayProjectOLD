@@ -4,12 +4,10 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="ImageViewer working version">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/test/java/GraphicsScalingApp.java" />
+    <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageScrollPane.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageScrollPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPlayImageViewerComponent.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPlayImageViewerComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageView.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.xml" afterPath="$PROJECT_DIR$/settings.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -89,24 +87,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="JMEPlayImageViewerComponent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPlayImageViewerComponent.java">
+      <file leaf-file-name="JMEPLayImageScrollPane.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageScrollPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="157">
+              <caret line="84" column="100" lean-forward="false" selection-start-line="84" selection-start-column="100" selection-end-line="84" selection-end-column="100" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMEPLayImageScrollPane.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageScrollPane.java">
+      <file leaf-file-name="JMEPLayImageView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="86" column="23" lean-forward="true" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="883">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1177,8 +1175,8 @@
         <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/ImageViewerComponent.java" />
         <option value="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/gui/EditorViewer.java" />
         <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPlayImageViewerComponent.java" />
-        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageView.java" />
         <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageScrollPane.java" />
+        <option value="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageView.java" />
       </list>
     </option>
   </component>
@@ -1274,6 +1272,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1365,10 +1366,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1565,6 +1563,18 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JMEPlay" />
+      <envs />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -1782,18 +1792,6 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JMEPlay" />
-      <envs />
-    </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="filePath" />
@@ -1995,7 +1993,13 @@
       <workItem from="1501692535562" duration="3301000" />
       <workItem from="1501740274263" duration="3673000" />
       <workItem from="1501745583457" duration="11115000" />
-      <workItem from="1501765608094" duration="160000" />
+      <workItem from="1501765608094" duration="2564000" />
+      <workItem from="1501775920203" duration="1966000" />
+      <workItem from="1501791367098" duration="6659000" />
+      <workItem from="1501798393122" duration="7791000" />
+      <workItem from="1501865815633" duration="22000" />
+      <workItem from="1501867210286" duration="61000" />
+      <workItem from="1502260724745" duration="3421000" />
     </task>
     <task id="LOCAL-00001" summary="Add Copy and Select All function to JMEPlayConsole">
       <created>1500652278113</created>
@@ -2179,7 +2183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501740882572</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="ImageViewer working version with zoom">
+      <created>1501765786623</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1501765786624</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2215,7 +2226,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309022000" />
+    <option name="totallyTimeSpent" value="331346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2238,13 +2249,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29166666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3616352" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21697357" sideWeight="0.49591598" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23458767" sideWeight="0.49591598" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13891113" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2331,7 +2342,8 @@
     <MESSAGE value="Some changes for Project structure" />
     <MESSAGE value="Cleanup console plugin" />
     <MESSAGE value="ImageViewer working version" />
-    <option name="LAST_COMMIT_MESSAGE" value="ImageViewer working version" />
+    <MESSAGE value="ImageViewer working version with zoom" />
+    <option name="LAST_COMMIT_MESSAGE" value="ImageViewer working version with zoom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2344,55 +2356,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/beans/Observable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="75" column="9" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/beans/property/Property.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/Parent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="1762" column="9" lean-forward="false" selection-start-line="1762" selection-start-column="9" selection-end-line="1762" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/CacheHint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-146">
-          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/layout/GridPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="728" column="11" lean-forward="false" selection-start-line="728" selection-start-column="11" selection-end-line="728" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/gui/EditorCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/ImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilderCenter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -2532,17 +2495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
           <caret line="88" column="11" lean-forward="false" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
-          <folding>
-            <element signature="e#2185#2186#0" expanded="false" />
-            <element signature="e#2231#2232#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/test/java/GraphicsScalingApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -2581,22 +2533,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/control/ScrollPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="247" column="43" lean-forward="true" selection-start-line="247" selection-start-column="28" selection-end-line="247" selection-end-column="43" />
-          <folding>
-            <element signature="e#9861#9862#0" expanded="false" />
-            <element signature="e#9904#9905#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/beans/value/ObservableValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2661,58 +2601,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/layout/Region.java">
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/beans/value/WritableDoubleValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="881" column="40" lean-forward="false" selection-start-line="881" selection-start-column="40" selection-end-line="881" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="428">
+          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/image/ImageView.java">
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="140" column="31" lean-forward="false" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="7075" column="48" lean-forward="false" selection-start-line="7075" selection-start-column="38" selection-end-line="7075" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="619">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPlayImageViewerComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        <state relative-caret-position="598">
+          <caret line="58" column="28" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/beans/value/WritableDoubleValue.java">
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/test/java/GraphicsScalingApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+        <state relative-caret-position="419">
+          <caret line="197" column="11" lean-forward="true" selection-start-line="126" selection-start-column="105" selection-end-line="126" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/javafx/scene/control/behavior/BehaviorBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="75" column="13" lean-forward="false" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/javafx/scene/control/skin/BehaviorSkinBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056">
+          <caret line="42" column="74" lean-forward="true" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/javafx/scene/control/skin/ScrollPaneSkin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1968">
+          <caret line="122" column="25" lean-forward="false" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/javafx/scene/control/behavior/ScrollPaneBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/control/ScrollPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="262" column="31" lean-forward="false" selection-start-line="262" selection-start-column="22" selection-end-line="262" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/image/ImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="498" column="22" lean-forward="false" selection-start-line="498" selection-start-column="22" selection-end-line="498" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="3111" column="24" lean-forward="false" selection-start-line="3111" selection-start-column="24" selection-end-line="3111" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/geometry/Bounds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-675">
+          <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/beans/property/Property.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/layout/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="881" column="40" lean-forward="false" selection-start-line="881" selection-start-column="40" selection-end-line="881" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageScrollPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="86" column="23" lean-forward="true" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+        <state relative-caret-position="157">
+          <caret line="84" column="100" lean-forward="false" selection-start-line="84" selection-start-column="100" selection-end-line="84" selection-end-column="100" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
