@@ -7,11 +7,13 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
+import javafx.scene.Group;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.nio.file.Path;
@@ -22,20 +24,20 @@ import java.nio.file.Path;
  * @author vp-byte (Vladimir Petrenko)
  */
 @SuppressWarnings("FieldCanBeLocal")
-class JMEPLayImageScrollPane extends ScrollPane {
+class JMEPlayImageScrollPane extends ScrollPane {
     private final double SCROLL_DELTA = 1.1;
     private ObjectProperty<Point2D> mouseCoordinates = new SimpleObjectProperty<>();
     private ObjectProperty<Point2D> lastMousePressedCoordinates = new SimpleObjectProperty<>();
 
     private DoubleProperty zoomPropertyWidth;
     private DoubleProperty zoomPropertyHight;
-    private JMEPLayImageView imageView;
+    private JMEPlayImageView imageView;
     private BorderPane borderPane;
     private VBox vBox;
 
-    public JMEPLayImageScrollPane(Path path) {
+    public JMEPlayImageScrollPane(Path path) {
         Image image = new Image("file:" + path.toAbsolutePath().toString());
-        imageView = new JMEPLayImageView();
+        imageView = new JMEPlayImageView();
         imageView.setImage(image);
         imageView.setPreserveRatio(true);
 
@@ -46,10 +48,8 @@ class JMEPLayImageScrollPane extends ScrollPane {
         borderPane = new BorderPane();
         borderPane.setCenter(imageView);
 
-      /*  VBox ts = new VBox(borderPane);
-        ts.minWidthProperty().bind(borderPane.widthProperty().multiply(2));
-        ts.minHeightProperty().bind(borderPane.heightProperty().multiply(2));
-*/
+
+
         vBox = new VBox(borderPane);
         vBox.setAlignment(Pos.CENTER);
         vBox.minWidthProperty().bind(widthProperty());
@@ -57,14 +57,13 @@ class JMEPLayImageScrollPane extends ScrollPane {
 
         imageView.setOnMouseMoved(this::processMouseMoved);
 
-        zoomPropertyWidth.addListener((Observable listener) -> borderPane.setPrefWidth(zoomPropertyWidth.get()));
-        zoomPropertyHight.addListener((Observable listener) -> borderPane.setPrefHeight(zoomPropertyHight.get()));
-
-        addEventFilter(ScrollEvent.ANY, this::processScroll);
+        borderPane.prefWidthProperty().bind(zoomPropertyWidth);
+        borderPane.prefHeightProperty().bind(zoomPropertyHight);
         borderPane.setOnMousePressed(this::processMousePressed);
         borderPane.setOnMouseDragged(this::processMouseDragged);
 
-        setContent(vBox);
+        addEventFilter(ScrollEvent.ANY, this::processScroll);
+        setContent(new Group(vBox));
     }
 
     private void processMouseMoved(MouseEvent event) {
@@ -88,18 +87,8 @@ class JMEPLayImageScrollPane extends ScrollPane {
             }
         }
 
-        double desHvalue = mouseCoordinates.get().getX() / imageView.getBoundsInParent().getWidth();
-        //double desVvalue = mouseCoordinates.get().getY() / imageView.getBoundsInParent().getHeight();
-
-        double extraWidth = borderPane.getLayoutBounds().getWidth() - getViewportBounds().getWidth();
-        if (extraWidth >= 0.0) {
-            System.out.println(mouseCoordinates.get().getX());
-            System.out.println(imageView.getBoundsInParent().getWidth());
-            System.out.println(desHvalue);
-        }
-
         layout();
-        setHvalue(desHvalue);
+        setHvalue(0.5);
         setVvalue(0.5);
 
     }

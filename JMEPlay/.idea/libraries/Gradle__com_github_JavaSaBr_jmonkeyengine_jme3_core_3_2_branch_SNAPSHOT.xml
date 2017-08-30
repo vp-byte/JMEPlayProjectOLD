@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.JavaSaBr.jmonkeyengine:jme3-core:3.2_branch-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.JavaSaBr.jmonkeyengine/jme3-core/3.2_branch-SNAPSHOT/25d336812a1e4fb220fdc5b9311d2ae014b7605/jme3-core-3.2_branch-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.JavaSaBr.jmonkeyengine/jme3-core/3.2_branch-SNAPSHOT/57065f42c100648444796e92f7bda888ca8a7d8c/jme3-core-3.2_branch-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.JavaSaBr.jmonkeyengine/jme3-core/3.2_branch-SNAPSHOT/eef1f9755010641dccbb53affa9b37876facea70/jme3-core-3.2_branch-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.JavaSaBr.jmonkeyengine/jme3-core/3.2_branch-SNAPSHOT/5612eeae6655d0a29962661056dcc5f955bc5a11/jme3-core-3.2_branch-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

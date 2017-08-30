@@ -1,11 +1,18 @@
 package com.jmeplay.core.gui;
 
+import com.jmeplay.Resources;
+import com.jmeplay.core.utils.Settings;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
+import javafx.stage.Screen;
 import javafx.stage.StageStyle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,9 +34,8 @@ import javafx.stage.Stage;
 @ComponentScan({"com.jmeplay.core", "com.jmeplay.plugin"})
 public class JMEPlay extends Application {
 
-    private Stage stage;
-
     private ConfigurableApplicationContext appContext;
+    private Stage stage;
 
     @Value("${application.name}")
     private String applicationName;
@@ -37,11 +43,25 @@ public class JMEPlay extends Application {
     @Value("${jme.version}")
     private String jmeVersion;
 
-    @Autowired
+    // Injected
+    private Settings settings;
     private EditorBuilder editorBuilder;
+    private EditorBuilderCenterCenter editorBuilderCenterCenter;
 
     @Autowired
-    private EditorBuilderCenterCenter editorBuilderCenterCenter;
+    public void setSettings(Settings settings) {
+        this.settings = settings;
+    }
+
+    @Autowired
+    public void setEditorBuilder(EditorBuilder editorBuilder) {
+        this.editorBuilder = editorBuilder;
+    }
+
+    @Autowired
+    public void setEditorBuilderCenterCenter(EditorBuilderCenterCenter editorBuilderCenterCenter) {
+        this.editorBuilderCenterCenter = editorBuilderCenterCenter;
+    }
 
     /**
      * Main point to start whole Application
@@ -75,19 +95,86 @@ public class JMEPlay extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         this.stage = stage;
-        String title = applicationName + " (" + jmeVersion + ")";
-        stage.setTitle(title);
-        stage.setScene(editorBuilder.getScene());
-        stage.setMinWidth(800);
-        stage.setMinHeight(600);
-        stage.setMaximized(true);
-        editorBuilder.initEditor();
-        stage.show();
+        initStage();
 
         stage.widthProperty().addListener((observable, oldValue, newValue) -> editorBuilderCenterCenter.resetDividerPositions());
         stage.heightProperty().addListener((observable, oldValue, newValue) -> editorBuilderCenterCenter.resetDividerPositions());
         //new Thread(() -> Platform.runLater(() -> showSplashscreen())).start();
     }
+
+    private void initStage() {
+        initStageTitle();
+        stage.setScene(editorBuilder.getScene());
+
+
+        initStageMinHeight();
+        initStageMinWidth();
+        initStageMaximized();
+
+        stage.show();
+
+        initStageY();
+        initStageX();
+    }
+
+    private void initStageTitle() {
+        stage.setTitle(applicationName + " (" + jmeVersion + ")");
+    }
+
+    private void initStageMinHeight() {
+        Double stageMinHeight = settings.getOptionDouble(Resources.editorStageMinHeight, Resources.editorDefaultStageMinHeight);
+        Double screenHeight = Screen.getPrimary().getVisualBounds().getHeight();
+        if (stageMinHeight == null) {
+            stageMinHeight = screenHeight * 2 / 3;
+            settings.setOption(Resources.editorStageMinHeight, stageMinHeight);
+        }
+        stage.setMinHeight(stageMinHeight);
+    }
+
+    private void initStageMinWidth() {
+        Double stageMinWidth = settings.getOptionDouble(Resources.editorStageMinWidth, Resources.editorDefaultStageMinWidth);
+        Double screenWidth = Screen.getPrimary().getVisualBounds().getWidth();
+        if (stageMinWidth == null) {
+            stageMinWidth = screenWidth * 2 / 3;
+            settings.setOption(Resources.editorStageMinWidth, stageMinWidth);
+        }
+        stage.setMinWidth(stageMinWidth);
+    }
+
+    private void initStageMaximized() {
+        stage.setMaximized(settings.getOptionAsBoolean(Resources.editorMaximized, Resources.editorDefaultMaximized));
+        stage.maximizedProperty().addListener((observable, oldValue, newValue) -> settings.setOption(Resources.editorMaximized, newValue));
+    }
+
+    private void initStageY() {
+        Double stageY = settings.getOptionDouble(Resources.editorStageY, Resources.editorDefaultStageY);
+        if (stageY != null) {
+            stage.setY(stageY);
+        }
+        stage.yProperty().addListener((observable, oldValue, newValue) -> {
+            if (!stage.isMaximized()) {
+                settings.setOption(Resources.editorStageY, newValue.doubleValue());
+            }
+        });
+    }
+
+    private void initStageX() {
+        Double stageX = settings.getOptionDouble(Resources.editorStageX, Resources.editorDefaultStageX);
+        if (stageX != null) {
+            double screensWidth = Screen.getScreens().stream().mapToDouble(screen -> screen.getBounds().getWidth()).sum();
+            double stageXWidth = stageX + stage.getMinWidth();
+            if (stageXWidth <= screensWidth) {
+                stage.setX(stageX);
+            }
+        }
+        stage.xProperty().addListener((observable, oldValue, newValue) ->
+        {
+            if (!stage.isMaximized()) {
+                settings.setOption(Resources.editorStageX, newValue.doubleValue());
+            }
+        });
+    }
+
 
     /**
      * Stop spring context
@@ -98,6 +185,7 @@ public class JMEPlay extends Application {
     public void stop() throws Exception {
         appContext.stop();
     }
+
 
     private void showSplashscreen() {
         Stage splashscreenStage = new Stage();

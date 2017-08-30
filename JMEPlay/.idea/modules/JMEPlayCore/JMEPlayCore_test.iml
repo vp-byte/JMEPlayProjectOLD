@@ -15,13 +15,12 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.jmonkeyengine:jme3-core:3.2_branch-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl:3.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-glfw:3.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: xalan:xalan:2.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-openal:3.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.xmlgraphics:batik-svg-dom:1.8" level="project" />
     <orderEntry type="library" name="Gradle: org.ow2.asm:asm:5.0.3" level="project" />
     <orderEntry type="library" name="Gradle: org.skyscreamer:jsonassert:1.4.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:4.3.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.xmlgraphics:batik-dom:1.8" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-beans:4.3.7.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.yaml:snakeyaml:1.17" level="project" />
     <orderEntry type="library" name="Gradle: de.codecentric.centerdevice:javafxsvg:1.2.1" level="project" />
@@ -45,7 +44,7 @@
     <orderEntry type="library" name="Gradle: org.objenesis:objenesis:2.1" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.xmlgraphics:batik-parser:1.8" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.xmlgraphics:batik-dom:1.8" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:4.3.7.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: com.github.JavaSaBr.jmonkeyengine:jme3-lwjgl3:3.2_branch-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.5.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:jul-to-slf4j:1.7.24" level="project" />
@@ -77,7 +76,7 @@
     <orderEntry type="library" name="Gradle: org.apache.xmlgraphics:batik-script:1.8" level="project" />
     <orderEntry type="module" module-name="JMEPlayDefinition_main" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:1.5.2.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-openal:3.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: xalan:xalan:2.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-opencl:3.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.github.JavaSaBr.jmonkeyengine:jme3-core:3.2_branch-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-jemalloc:3.1.0" level="project" />
@@ -101,8 +100,9 @@
     <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-openal:natives-windows:3.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.xmlgraphics:batik-xml:1.8" level="project" />
     <orderEntry type="library" name="Gradle: com.github.JavaSaBr.jmonkeyengine:jme3-desktop:3.2_branch-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-openal:natives-linux:3.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl:3.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-openal:natives-macos:3.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-openal:natives-linux:3.1.0" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="JMEPlayCore_main" />
 </module>

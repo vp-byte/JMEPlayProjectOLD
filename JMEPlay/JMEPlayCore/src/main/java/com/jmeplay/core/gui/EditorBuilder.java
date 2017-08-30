@@ -39,6 +39,7 @@ public class EditorBuilder {
         scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("/jmeplay/css/editor.css").toExternalForm());
         initBorderPane();
+        initEditor();
     }
 
     /**
@@ -53,7 +54,7 @@ public class EditorBuilder {
     /**
      * Initialize editor and set top, center and bottom view of the border pane
      */
-    public void initEditor() {
+    private void initEditor() {
         borderPane.setTop(editorBuilderTop.view());
         borderPane.setCenter(editorBuilderCenter.view());
         borderPane.setBottom(editorBuiderInfoBar.view());

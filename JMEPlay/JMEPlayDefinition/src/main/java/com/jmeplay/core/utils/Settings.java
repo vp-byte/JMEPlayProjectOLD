@@ -53,8 +53,25 @@ public class Settings {
         }
     }
 
+    private String getProperty(String key) {
+        String option = settings.getProperty(key);
+        return option == null || option.equals("null") ? null : option;
+    }
+
+    public void setOption(String key, Boolean value) {
+        settings.setProperty(key, "" + value);
+    }
+
     public void setOption(String key, String value) {
         settings.setProperty(key, value);
+    }
+
+    public void setOption(String key, Integer value) {
+        settings.setProperty(key, "" + value);
+    }
+
+    public void setOption(String key, Double value) {
+        settings.setProperty(key, "" + value);
     }
 
     public void removeOption(String key) {
@@ -62,7 +79,7 @@ public class Settings {
     }
 
     public Boolean getOptionAsBoolean(String key, Boolean defaultValue) {
-        String option = settings.getProperty(key);
+        String option = getProperty(key);
         if (option == null) {
             setOption(key, "" + defaultValue);
             return defaultValue;
@@ -71,7 +88,7 @@ public class Settings {
     }
 
     public String getOptionAsString(String key, String defaultValue) {
-        String option = settings.getProperty(key);
+        String option = getProperty(key);
         if (option == null) {
             setOption(key, defaultValue);
             return defaultValue;
@@ -80,7 +97,7 @@ public class Settings {
     }
 
     public Integer getOptionInteger(String key, Integer defaultValue) {
-        String option = settings.getProperty(key);
+        String option = getProperty(key);
         if (option == null) {
             setOption(key, "" + defaultValue);
             return defaultValue;
@@ -89,7 +106,7 @@ public class Settings {
     }
 
     public Double getOptionDouble(String key, Double defaultValue) {
-        String option = settings.getProperty(key);
+        String option = getProperty(key);
         if (option == null) {
             setOption(key, "" + defaultValue);
             return defaultValue;

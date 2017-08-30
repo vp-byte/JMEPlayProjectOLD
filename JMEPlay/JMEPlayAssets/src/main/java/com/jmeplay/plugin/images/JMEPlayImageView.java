@@ -5,7 +5,7 @@ import javafx.scene.image.ImageView;
 /**
  * Image view to fill and fit parent with ImageView
  */
-public class JMEPLayImageView extends ImageView {
+public class JMEPlayImageView extends ImageView {
     private double minWidth = 800;
     private double minHeight = 600;
 
