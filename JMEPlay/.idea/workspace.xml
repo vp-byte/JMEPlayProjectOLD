@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107f1e90-6223-4210-98fd-902600dc3e87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/Resources.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageScrollPane.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPlayImageScrollPane.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPLayImageView.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPlayImageView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/JMEPlay.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/JMEPlay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayDefinition/out/production/classes/com/jmeplay/core/utils/Settings.class" afterPath="$PROJECT_DIR$/JMEPlayDefinition/out/production/classes/com/jmeplay/core/utils/Settings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_JavaSaBr_jmonkeyengine_jme3_core_3_2_branch_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_JavaSaBr_jmonkeyengine_jme3_core_3_2_branch_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_JavaSaBr_jmonkeyengine_jme3_lwjgl3_3_2_branch_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_JavaSaBr_jmonkeyengine_jme3_lwjgl3_3_2_branch_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/JMEPlayCore/JMEPlayCore_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/EditorBuilder.class" afterPath="$PROJECT_DIR$/JMEPlayCore/out/production/classes/com/jmeplay/core/gui/EditorBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPlayImageViewerComponent.java" afterPath="$PROJECT_DIR$/JMEPlayAssets/src/main/java/com/jmeplay/plugin/images/JMEPlayImageViewerComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilder.java" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/EditorBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/JMEPlay.java" afterPath="$PROJECT_DIR$/JMEPlayCore/src/main/java/com/jmeplay/core/gui/JMEPlay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/Settings.java" afterPath="$PROJECT_DIR$/JMEPlayDefinition/src/main/java/com/jmeplay/core/utils/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.xml" afterPath="$PROJECT_DIR$/settings.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -1928,7 +1913,7 @@
       <workItem from="1504073555320" duration="2067000" />
       <workItem from="1504093863628" duration="1304000" />
       <workItem from="1504102241699" duration="3111000" />
-      <workItem from="1504120764965" duration="10719000" />
+      <workItem from="1504120764965" duration="10951000" />
     </task>
     <task id="LOCAL-00001" summary="Add Copy and Select All function to JMEPlayConsole">
       <created>1500652278113</created>
@@ -2126,7 +2111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502265813841</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Add save for stage position">
+      <created>1504131931035</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1504131931035</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2162,7 +2154,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361697000" />
+    <option name="totallyTimeSpent" value="361929000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2185,7 +2177,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35861322" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35861322" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2254,7 +2246,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Copy and Select All function to JMEPlayConsole" />
     <MESSAGE value="Add git ignore file" />
     <MESSAGE value="Add git ignore file idea" />
     <MESSAGE value="Remove test data from JMEPlayConsole" />
@@ -2279,7 +2270,8 @@
     <MESSAGE value="ImageViewer working version" />
     <MESSAGE value="ImageViewer working version with zoom" />
     <MESSAGE value="ImageViewer can view big images" />
-    <option name="LAST_COMMIT_MESSAGE" value="ImageViewer can view big images" />
+    <MESSAGE value="Add save for stage position" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add save for stage position" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
